@@ -100,7 +100,7 @@ const jsonLd = [
     ],
     author: { '@type': 'Organization', name: 'EzTechify', url: 'https://eztechify.com' },
     aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '1247' },
-    audience: { '@type': 'BusinessAudience', '@type': 'BusinessAudience' },
+    audience: { '@type': 'BusinessAudience' },
     areaServed: 'Worldwide',
   },
   {
