@@ -73,7 +73,7 @@ export default function TermsOfService() {
 
           <section>
             <h2 className="text-xl font-semibold mb-3" style={{ color: 'var(--cream)', fontFamily: 'var(--font-playfair), serif' }}>10. Governing Law</h2>
-            <p>These Terms are governed by the laws of Saudi Arabia. Any disputes will be resolved in the courts of Saudi Arabia, unless otherwise agreed in writing.</p>
+            <p>These Terms are governed by international commerce laws. Any disputes will be resolved through arbitration, unless otherwise agreed in writing.</p>
           </section>
 
           <section>

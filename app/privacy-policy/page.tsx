@@ -63,7 +63,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="text-xl font-semibold mb-3" style={{ color: 'var(--cream)', fontFamily: 'var(--font-playfair), serif' }}>7. GDPR & Saudi PDPL Compliance</h2>
-            <p>EzUmrah complies with the EU General Data Protection Regulation (GDPR) and the Saudi Personal Data Protection Law (PDPL). We process data based on your consent, contract necessity, and legitimate business interests.</p>
+            <p>EzUmrah complies with international data protection regulations including the EU General Data Protection Regulation (GDPR), and applicable local data protection laws in the regions where our customers operate. We process data based on your consent, contract necessity, and legitimate business interests.</p>
           </section>
 
           <section>

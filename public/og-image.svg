@@ -12,8 +12,8 @@
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <text x="600" y="280" font-size="72" text-anchor="middle" fill="url(#gold)" font-family="serif" font-weight="bold">EzUmrah</text>
-  <text x="600" y="360" font-size="32" text-anchor="middle" fill="#94a3b8" font-family="sans-serif">Cloud Travel CRM for Umrah &amp; Hajj Agencies</text>
-  <text x="600" y="420" font-size="24" text-anchor="middle" fill="#c9a84c" font-family="sans-serif">Trusted by 850+ Travel Agencies Worldwide</text>
-  <text x="600" y="520" font-size="20" text-anchor="middle" fill="#64748b" font-family="sans-serif">umrah.eztechify.com · by EzTechify</text>
+  <text x="600" y="260" font-size="72" text-anchor="middle" fill="url(#gold)" font-family="serif" font-weight="bold">EzUmrah</text>
+  <text x="600" y="340" font-size="32" text-anchor="middle" fill="#94a3b8" font-family="sans-serif">Cloud Travel CRM for Umrah &amp; Hajj Agencies Worldwide</text>
+  <text x="600" y="400" font-size="24" text-anchor="middle" fill="#c9a84c" font-family="sans-serif">Trusted by 850+ Travel Agencies in 120+ Countries</text>
+  <text x="600" y="510" font-size="20" text-anchor="middle" fill="#64748b" font-family="sans-serif">umrah.eztechify.com · by EzTechify</text>
 </svg>
