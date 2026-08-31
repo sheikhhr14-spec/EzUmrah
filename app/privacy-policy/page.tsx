@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-xl font-semibold mb-3" style={{ color: 'var(--cream)', fontFamily: 'var(--font-playfair), serif' }}>2. Information We Collect</h2>
             <p className="mb-3">We collect the following types of information:</p>
             <ul className="list-disc pl-6 space-y-2 text-sm">
-              <li><strong>Account Information:</strong> Name, email, phone number, travel agency name, and license number.</li>
+              <li><strong>Account Information:</strong> Name, WhatsApp number, country, travel agency name, and license number.</li>
               <li><strong>Pilgrim Data:</strong> Names, passport numbers, visa details, health certificates, and travel documents uploaded by your agency.</li>
               <li><strong>Usage Data:</strong> IP address, browser type, device information, and interaction logs with our platform.</li>
               <li><strong>Payment Information:</strong> Billing details processed through our secure payment partners. We do not store full card numbers.</li>

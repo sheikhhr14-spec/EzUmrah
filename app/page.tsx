@@ -155,7 +155,7 @@ export default function Home() {
                 { num: '01', icon: '📝', title: 'Create Your Account', desc: 'Sign up in 2 minutes. Verify your travel agency license. We activate within 4 hours.' },
                 { num: '02', icon: '⚙️', title: 'Configure Your CRM', desc: 'Add your team, upload your logo, set up package templates, and configure invoice branding.' },
                 { num: '03', icon: '👤', title: 'Add Your First Pilgrim', desc: 'Enter pilgrim details, upload documents, assign flights & hotels, generate quotations.' },
-                { num: '04', icon: '📤', title: 'Invoice & Go Live', desc: 'Print branded invoices, send confirmation emails, and track every booking to departure.' },
+                { num: '04', icon: '📤', title: 'Invoice & Go Live', desc: 'Print branded invoices, send confirmation notifications, and track every booking to departure.' },
               ].map((step, i) => (
                 <div key={i} className="glass-card p-8 text-center fade-up" style={{ animationDelay: `${i * 0.1}s` }}>
                   <div className="text-4xl font-bold mb-4 opacity-30" style={{ color: 'var(--gold)', fontFamily: 'var(--font-playfair), serif' }}>{step.num}</div>
@@ -183,7 +183,7 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {[
-                { name: 'Starter', price: '79', desc: 'For small agencies launching their first Umrah or Hajj program.', features: ['Up to 200 pilgrims/season', '3 staff accounts', 'All CRM modules included', 'Invoice & email', 'Document vault'], popular: false },
+                { name: 'Starter', price: '79', desc: 'For small agencies launching their first Umrah or Hajj program.', features: ['Up to 200 pilgrims/season', '3 staff accounts', 'All CRM modules included', 'Invoice Invoice & email notifications', 'Document vault'], popular: false },
                 { name: 'Agency Pro', price: '199', desc: 'For growing agencies with multiple programs and online presence needs.', features: ['Up to 1,000 pilgrims/season', '15 staff accounts', 'White-label portal', 'GDS flight search', 'WhatsApp Business API'], popular: true },
                 { name: 'Enterprise', price: '499', desc: 'For large operators handling thousands of pilgrims.', features: ['Unlimited pilgrims', 'Unlimited staff accounts', 'Hajj quota management', 'Multi-agency sub-accounts', 'Dedicated account manager'], popular: false },
               ].map((plan, i) => (

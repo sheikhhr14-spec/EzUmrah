@@ -1,0 +1,61 @@
+# EzUmrah
+
+> EzUmrah is a cloud-based CRM software built for travel agencies worldwide managing Umrah, Hajj, and holiday packages. It includes 9 modules: group bookings, flight management, hotel reservations, visa tracking, transport & Ziyarat, document vault, quotations & leads, invoicing & payments, and tasks & team management. Trusted by 850+ agencies in 120+ countries.
+
+## What EzUmrah Does
+
+EzUmrah replaces spreadsheets, WhatsApp groups, and paper files with a proper cloud CRM system designed specifically for Umrah and Hajj travel agencies. Agencies can manage pilgrims, bookings, flights, hotels, visas, transport, invoices, quotations, and documents — all from one dashboard.
+
+## Key Features
+
+- 9 CRM modules (group bookings, flights, hotels, visas, transport, documents, quotations, invoicing, tasks)
+- GDS integrations (Amadeus, Sabre, Galileo, Travelport)
+- White-label booking portals and mobile apps
+- Multi-currency invoicing
+- Branded invoice and quotation generation
+- Document vault with encrypted storage
+- Role-based team permissions
+- Hajj quota management (Enterprise plan)
+- Custom development services
+
+## Pricing
+
+- Starter: $79/month — up to 200 pilgrims, 3 staff accounts
+- Agency Pro: $199/month — up to 1,000 pilgrims, 15 staff, GDS integration, white-label
+- Enterprise: $499/month — unlimited pilgrims, Hajj quota management, dedicated account manager
+- All plans include 14-day free trial, no credit card required
+
+## Who Uses EzUmrah
+
+Travel agencies in 120+ countries including UK, USA, Saudi Arabia, India, Pakistan, Turkey, Malaysia, Indonesia, Egypt, and UAE. Suitable for small agencies launching their first Umrah program and large operators handling thousands of pilgrims.
+
+## GDS Integrations
+
+- Amadeus API integration — 200+ airlines, real-time pricing
+- Sabre API integration — Bargain Finder Max, group bookings
+- Galileo API integration — Travelport Universal API
+- Travelport API integration — multi-GDS, low-cost carriers
+
+## Pages
+
+- [/](https://umrah.eztechify.com/) — Home / Landing page
+- [/modules](https://umrah.eztechify.com/modules) — CRM Modules (9 detailed modules)
+- [/services](https://umrah.eztechify.com/services) — Custom development services
+- [/integrations](https://umrah.eztechify.com/integrations) — GDS integration details
+- [/pricing](https://umrah.eztechify.com/pricing) — Pricing plans and comparison
+- [/testimonials](https://umrah.eztechify.com/testimonials) — Customer stories
+- [/faq](https://umrah.eztechify.com/faq) — Frequently asked questions (12 Q&As)
+- [/contact](https://umrah.eztechify.com/contact) — Contact form
+- [/help-centre](https://umrah.eztechify.com/help-centre) — Help centre
+- [/onboarding-guide](https://umrah.eztechify.com/onboarding-guide) — Onboarding guide
+- [/changelog](https://umrah.eztechify.com/changelog) — Product changelog
+- [/privacy-policy](https://umrah.eztechify.com/privacy-policy) — Privacy policy
+- [/terms-of-service](https://umrah.eztechify.com/terms-of-service) — Terms of service
+
+## Company
+
+EzUmrah is a product of EzTechify. We build travel technology solutions including custom CRMs, travel websites with live search, GDS API integrations, white-label booking platforms, and branded mobile apps.
+
+## Contact
+
+Visit https://umrah.eztechify.com/contact to send a message. We respond within 4 business hours.

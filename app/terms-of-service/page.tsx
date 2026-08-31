@@ -84,7 +84,7 @@ export default function TermsOfService() {
 
           <section>
             <h2 className="text-xl font-semibold mb-3" style={{ color: 'var(--cream)', fontFamily: 'var(--font-playfair), serif' }}>11. Changes to Terms</h2>
-            <p>We may update these Terms from time to time. We will notify you of significant changes via email or in-app notification at least 30 days before they take effect.</p>
+            <p>We may update these Terms from time to time. We will notify you of significant changes via in-app notification or WhatsApp at least 30 days before they take effect.</p>
           </section>
 
           <section>

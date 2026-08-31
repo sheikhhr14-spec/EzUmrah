@@ -19,7 +19,7 @@ const plans = [
       { text: 'Up to 200 pilgrims/season', included: true },
       { text: '3 staff accounts', included: true },
       { text: 'All 9 CRM modules included', included: true },
-      { text: 'Invoice generation & email', included: true },
+      { text: 'Invoice generation Invoice generation & email notifications', included: true },
       { text: 'Document vault', included: true },
       { text: 'Lead & quotation management', included: true },
       { text: 'Basic task management', included: true },
@@ -77,7 +77,7 @@ const comparison = [
   { feature: 'Multi-agency sub-accounts', starter: '—', pro: '—', enterprise: '✓' },
   { feature: 'Custom API & webhooks', starter: '—', pro: '—', enterprise: '✓' },
   { feature: 'Dedicated account manager', starter: '—', pro: '—', enterprise: '✓' },
-  { feature: 'Support level', starter: 'Email', pro: 'Priority', enterprise: '24/7 Priority' },
+  { feature: 'Support level', starter: 'Standard', pro: 'Priority', enterprise: '24/7 Priority' },
 ];
 
 export default function PricingPage() {

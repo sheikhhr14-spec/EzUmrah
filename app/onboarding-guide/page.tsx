@@ -13,8 +13,8 @@ const steps = [
   {
     num: '01',
     title: 'Create Your Account',
-    desc: 'Sign up at umrah.eztechify.com in 2 minutes. Enter your travel agency name, your name, and email. We verify your travel agency license and activate your account within 4 hours.',
-    tips: ['Have your agency license number ready', 'Use your work email for faster verification', 'Check your spam folder for the activation email'],
+    desc: 'Sign up at umrah.eztechify.com in 2 minutes. Enter your travel agency name, your name, and contact number. We verify your travel agency license and activate your account within 4 hours.',
+    tips: ['Have your agency license number ready', 'Use your agency WhatsApp number for faster verification', 'Check your WhatsApp for the activation message'],
   },
   {
     num: '02',
@@ -38,12 +38,12 @@ const steps = [
     num: '05',
     title: 'Generate Your First Invoice',
     desc: 'Create a branded invoice, set up an installment plan if needed, and email it directly from the system. Track payment status and send reminders automatically.',
-    tips: ['Set up payment terms before invoicing', 'Enable email notifications for invoice events', 'Test with a mock invoice first'],
+    tips: ['Set up payment terms before invoicing', 'Enable notifications for invoice events', 'Test with a mock invoice first'],
   },
   {
     num: '06',
     title: 'Go Live & Track',
-    desc: 'Print confirmation emails, track every booking to departure day, assign tasks to your team, and monitor your dashboard analytics for real-time insights.',
+    desc: 'Print confirmation notifications, track every booking to departure day, assign tasks to your team, and monitor your dashboard analytics for real-time insights.',
     tips: ['Set up daily task summaries for your team', 'Monitor the dashboard for booking status changes', 'Enable document expiry alerts'],
   },
 ];
