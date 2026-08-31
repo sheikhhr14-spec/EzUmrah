@@ -1,4 +1,3 @@
-import { LanguageProvider } from '@/components/LanguageContext';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Modules from '@/components/Modules';
@@ -16,7 +15,7 @@ import ChatFloat from '@/components/ChatFloat';
 
 export default function Home() {
   return (
-    <LanguageProvider>
+    <>
       <Navbar />
       <main>
         <Hero />
@@ -33,6 +32,6 @@ export default function Home() {
       <Footer />
       <CookieConsent />
       <ChatFloat />
-    </LanguageProvider>
+    </>
   );
 }
