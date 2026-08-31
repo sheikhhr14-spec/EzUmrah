@@ -17,7 +17,6 @@ interface Package {
   origin: 'Riyadh' | 'Lahore';
   duration: string;
   days: number;
-  nights: number;
   transport: 'Bus' | 'Flight';
   price: string;
   priceUnit: string;
@@ -27,6 +26,8 @@ interface Package {
   tag: string;
   tagColor: string;
   popular: boolean;
+  weeklyDeparture: boolean;
+  visaIncluded: boolean;
   highlights: string[];
   itinerary: ItineraryDay[];
   inclusions: string[];
@@ -37,33 +38,34 @@ const packages: Package[] = [
   {
     id: 'riyadh-3',
     origin: 'Riyadh',
-    duration: '3 Days / 2 Nights',
+    duration: '3 Days',
     days: 3,
-    nights: 2,
     transport: 'Bus',
     price: 'SAR 950',
     priceUnit: 'per person',
     priceUSD: '~$250',
-    hotelMakkah: '3★ Hotel near Haram (2 nights)',
+    hotelMakkah: 'Hotel near Haram',
     hotelMadinah: 'Day visit (no overnight)',
     tag: 'Express',
     tagColor: '#0d7c4e',
     popular: false,
+    weeklyDeparture: false,
+    visaIncluded: false,
     highlights: [
       'Round-trip bus transport from Riyadh',
-      '2 nights hotel in Makkah near Haram',
+      'Hotel in Makkah near Haram',
       'Day visit to Madinah (Masjid an-Nabawi)',
       'Umrah performance assistance',
       'Experienced group guide',
     ],
     itinerary: [
       { day: 'Day 1', title: 'Riyadh → Makkah', desc: 'Early morning departure from Riyadh by luxury bus (approx. 7 hours). Arrive in Makkah, check into hotel near Masjid al-Haram. Enter Ihram at Miqat and perform Umrah (Tawaf + Sa\'i).', icon: '🚌' },
-      { day: 'Day 2', title: 'Makkah — Spiritual Day', desc: 'Full day in Makkah. Attend prayers at Masjid al-Haram, perform additional Tawaf, and spend time in spiritual reflection. Overnight at hotel.', icon: '🕋' },
+      { day: 'Day 2', title: 'Makkah — Spiritual Day', desc: 'Full day in Makkah. Attend prayers at Masjid al-Haram, perform additional Tawaf, and spend time in spiritual reflection.', icon: '🕋' },
       { day: 'Day 3', title: 'Madinah → Riyadh', desc: 'Early morning bus to Madinah (approx. 5 hours). Visit Masjid an-Nabawi, pray at the Rawdah, then depart for Riyadh by bus (approx. 8 hours).', icon: '🕌' },
     ],
     inclusions: [
       'Round-trip luxury bus transport',
-      '2 nights hotel in Makkah (sharing basis)',
+      'Hotel in Makkah near Haram (sharing basis)',
       'Daily breakfast',
       'Madinah day visit with Masjid an-Nabawi',
       'Group guide assistance',
@@ -80,36 +82,38 @@ const packages: Package[] = [
   {
     id: 'riyadh-5',
     origin: 'Riyadh',
-    duration: '5 Days / 2 Nights',
+    duration: '5 Days',
     days: 5,
-    nights: 2,
     transport: 'Bus',
     price: 'SAR 1,450',
     priceUnit: 'per person',
     priceUSD: '~$385',
-    hotelMakkah: '3★ Hotel near Haram (1 night)',
-    hotelMadinah: '3★ Hotel near Haram (1 night)',
+    hotelMakkah: 'Hotel near Haram',
+    hotelMadinah: 'Hotel near Haram',
     tag: 'Value',
     tagColor: '#c9a96a',
     popular: true,
+    weeklyDeparture: true,
+    visaIncluded: false,
     highlights: [
-      'Round-trip bus transport from Riyadh',
-      '1 night hotel in Makkah near Haram',
-      '1 night hotel in Madinah near Masjid an-Nabawi',
+      'Weekly departures from Riyadh',
+      'Round-trip bus transport',
+      'Hotel in Makkah near Haram',
+      'Hotel in Madinah near Masjid an-Nabawi',
       'Full Ziyarat tour in Madinah',
       'Umrah performance assistance',
     ],
     itinerary: [
       { day: 'Day 1', title: 'Riyadh → Makkah', desc: 'Early morning departure from Riyadh by luxury bus. Arrive in Makkah, check into hotel. Enter Ihram at Miqat and perform Umrah.', icon: '🚌' },
-      { day: 'Day 2', title: 'Makkah — Prayers & Tawaf', desc: 'Full day in Makkah. Prayers at Masjid al-Haram, additional Tawaf, spiritual time. Overnight at Makkah hotel.', icon: '🕋' },
+      { day: 'Day 2', title: 'Makkah — Prayers & Tawaf', desc: 'Full day in Makkah. Prayers at Masjid al-Haram, additional Tawaf, spiritual time.', icon: '🕋' },
       { day: 'Day 3', title: 'Makkah → Madinah', desc: 'Morning departure to Madinah by bus (approx. 5 hours). Check into hotel near Masjid an-Nabawi. Evening prayers at the Prophet\'s Mosque.', icon: '🚐' },
-      { day: 'Day 4', title: 'Madinah — Ziyarat Tour', desc: 'Guided Ziyarat tour: Mount Uhud, Quba Mosque, Baqi Cemetery, Masjid Qiblatayn, and Jabal al-Nour viewpoint. Overnight at Madinah hotel.', icon: '⛰️' },
+      { day: 'Day 4', title: 'Madinah — Ziyarat Tour', desc: 'Guided Ziyarat tour: Mount Uhud, Quba Mosque, Baqi Cemetery, Masjid Qiblatayn, and Jabal al-Nour viewpoint.', icon: '⛰️' },
       { day: 'Day 5', title: 'Madinah → Riyadh', desc: 'Morning prayers at Masjid an-Nabawi, then depart for Riyadh by bus (approx. 8 hours). Arrive Riyadh by evening.', icon: '🚌' },
     ],
     inclusions: [
       'Round-trip luxury bus transport',
-      '1 night hotel in Makkah (sharing basis)',
-      '1 night hotel in Madinah (sharing basis)',
+      'Hotel in Makkah near Haram (sharing basis)',
+      'Hotel in Madinah near Haram (sharing basis)',
       'Daily breakfast',
       'Full Ziyarat tour in Madinah',
       'Makkah to Madinah transport',
@@ -129,20 +133,22 @@ const packages: Package[] = [
     origin: 'Lahore',
     duration: '7 Days / 6 Nights',
     days: 7,
-    nights: 6,
     transport: 'Flight',
     price: 'PKR 165,000',
     priceUnit: 'per person',
     priceUSD: '~$590',
-    hotelMakkah: '4★ Hotel near Haram (3 nights)',
-    hotelMadinah: '4★ Hotel near Haram (3 nights)',
+    hotelMakkah: 'Hotel near Haram',
+    hotelMadinah: 'Hotel near Haram',
     tag: 'Popular',
     tagColor: '#0d7c4e',
     popular: false,
+    weeklyDeparture: false,
+    visaIncluded: true,
     highlights: [
       'Return flights: Lahore ↔ Jeddah',
-      '3 nights hotel in Makkah (4★ near Haram)',
-      '3 nights hotel in Madinah (4★ near Haram)',
+      'Umrah visa included',
+      'Hotel in Makkah near Haram',
+      'Hotel in Madinah near Haram',
       'Airport transfers both ways',
       'Makkah to Madinah transport with Ziyarat stops',
       'Full Ziyarat tour in Madinah',
@@ -159,8 +165,9 @@ const packages: Package[] = [
     ],
     inclusions: [
       'Return flights: Lahore ↔ Jeddah (economy)',
-      '3 nights 4★ hotel in Makkah (sharing basis)',
-      '3 nights 4★ hotel in Madinah (sharing basis)',
+      'Umrah visa included',
+      'Hotel in Makkah near Haram (sharing basis)',
+      'Hotel in Madinah near Haram (sharing basis)',
       'All airport transfers (Jeddah ↔ Makkah, Madinah ↔ Jeddah)',
       'Makkah to Madinah transport with Ziyarat stops',
       'Full Ziyarat tour in Madinah',
@@ -169,7 +176,6 @@ const packages: Package[] = [
       'Ihram guidance and Umrah briefing',
     ],
     exclusions: [
-      'Umrah visa fees (approx. $120)',
       'Travel insurance',
       'Lunch',
       'Personal expenses',
@@ -182,20 +188,22 @@ const packages: Package[] = [
     origin: 'Lahore',
     duration: '14 Days / 13 Nights',
     days: 14,
-    nights: 13,
     transport: 'Flight',
     price: 'PKR 295,000',
     priceUnit: 'per person',
     priceUSD: '~$1,050',
-    hotelMakkah: '4★ Hotel near Haram (7 nights)',
-    hotelMadinah: '4★ Hotel near Haram (7 nights)',
+    hotelMakkah: 'Hotel near Haram',
+    hotelMadinah: 'Hotel near Haram',
     tag: 'Premium',
     tagColor: '#c9a96a',
     popular: false,
+    weeklyDeparture: false,
+    visaIncluded: true,
     highlights: [
       'Return flights: Lahore ↔ Jeddah',
-      '7 nights hotel in Makkah (4★ near Haram)',
-      '7 nights hotel in Madinah (4★ near Haram)',
+      'Umrah visa included',
+      'Hotel in Makkah near Haram',
+      'Hotel in Madinah near Haram',
       'All airport transfers both ways',
       'Makkah to Madinah transport with Ziyarat stops',
       'Extended Ziyarat tours in Madinah',
@@ -220,8 +228,9 @@ const packages: Package[] = [
     ],
     inclusions: [
       'Return flights: Lahore ↔ Jeddah (economy)',
-      '7 nights 4★ hotel in Makkah (sharing basis)',
-      '7 nights 4★ hotel in Madinah (sharing basis)',
+      'Umrah visa included',
+      'Hotel in Makkah near Haram (sharing basis)',
+      'Hotel in Madinah near Haram (sharing basis)',
       'All airport transfers (Jeddah ↔ Makkah, Madinah ↔ Jeddah)',
       'Makkah to Madinah transport with Ziyarat stops',
       'Two full Ziyarat tours in Madinah',
@@ -231,7 +240,6 @@ const packages: Package[] = [
       'Welcome kit (Ihram, prayer mat, tasbeeh)',
     ],
     exclusions: [
-      'Umrah visa fees (approx. $120)',
       'Travel insurance',
       'Lunch',
       'Personal expenses',
@@ -241,15 +249,47 @@ const packages: Package[] = [
   },
 ];
 
+const inquiryCountries = [
+  'Saudi Arabia', 'Pakistan', 'United Kingdom', 'United States', 'India',
+  'United Arab Emirates', 'Egypt', 'Malaysia', 'Indonesia', 'Turkey',
+  'Bangladesh', 'Nigeria', 'South Africa', 'Morocco', 'Jordan', 'Kuwait',
+  'Qatar', 'Bahrain', 'Oman', 'Canada', 'Germany', 'France', 'Other / Not Listed',
+];
+
 export default function PackagesClient() {
   const [activeTab, setActiveTab] = useState<FilterTab>('all');
   const [expandedId, setExpandedId] = useState<PackageId | null>(null);
+  const [inquiryStatus, setInquiryStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+
+  const handleInquiry = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setInquiryStatus('sending');
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://formspree.io/f/xppzwyvz', {
+        method: 'POST',
+        body: formData,
+        headers: { Accept: 'application/json' },
+      });
+
+      if (response.ok) {
+        setInquiryStatus('success');
+        form.reset();
+      } else {
+        setInquiryStatus('error');
+      }
+    } catch {
+      setInquiryStatus('error');
+    }
+  };
 
   const filtered = activeTab === 'all'
     ? packages
     : packages.filter((p) => p.origin.toLowerCase() === activeTab);
 
-  const lightColors = {
+  const lc = {
     bg: '#f8fafb',
     bgAlt: '#eef2f6',
     card: '#ffffff',
@@ -265,14 +305,14 @@ export default function PackagesClient() {
     dangerLight: '#fef2f2',
   };
 
-  const inputBase = {
+  const inputStyle = {
     background: '#f8fafb',
-    border: `1px solid ${lightColors.border}`,
-    color: lightColors.text,
+    border: `1px solid ${lc.border}`,
+    color: lc.text,
   };
 
   return (
-    <div style={{ background: lightColors.bg, color: lightColors.text, minHeight: '100vh', fontFamily: 'var(--font-inter), system-ui, sans-serif' }}>
+    <div style={{ background: lc.bg, color: lc.text, minHeight: '100vh', fontFamily: 'var(--font-inter), system-ui, sans-serif' }}>
       {/* ===== Light Header ===== */}
       <header
         className="fixed top-0 left-0 right-0 z-[1000] transition-all duration-300"
@@ -280,18 +320,18 @@ export default function PackagesClient() {
           background: 'rgba(255, 255, 255, 0.92)',
           backdropFilter: 'blur(16px) saturate(180%)',
           WebkitBackdropFilter: 'blur(16px) saturate(180%)',
-          borderBottom: `1px solid ${lightColors.border}`,
+          borderBottom: `1px solid ${lc.border}`,
           boxShadow: '0 1px 12px rgba(0,0,0,0.04)',
         }}
       >
         <div className="container flex items-center justify-between" style={{ height: '68px' }}>
           <a href="/" className="flex items-center gap-2.5">
             <div className="w-9 h-9 rounded-xl flex items-center justify-center text-lg"
-              style={{ background: `linear-gradient(135deg, ${lightColors.primaryLight}, ${lightColors.goldLight})`, border: `1px solid ${lightColors.border}` }}
+              style={{ background: `linear-gradient(135deg, ${lc.primaryLight}, ${lc.goldLight})`, border: `1px solid ${lc.border}` }}
             >
               🕋
             </div>
-            <span className="text-lg font-bold tracking-tight" style={{ fontFamily: 'var(--font-playfair), serif', color: lightColors.text }}>
+            <span className="text-lg font-bold tracking-tight" style={{ fontFamily: 'var(--font-playfair), serif', color: lc.text }}>
               EzUmrah
             </span>
           </a>
@@ -305,58 +345,56 @@ export default function PackagesClient() {
               <a key={link.href} href={link.href}
                 className="text-sm font-medium px-4 py-2 rounded-lg transition-all"
                 style={{
-                  color: link.active ? lightColors.primary : lightColors.textDim,
-                  background: link.active ? lightColors.primaryLight : 'transparent',
+                  color: link.active ? lc.primary : lc.textDim,
+                  background: link.active ? lc.primaryLight : 'transparent',
                 }}
               >
                 {link.label}
               </a>
             ))}
-            <a href="/contact" className="text-sm font-semibold px-5 py-2.5 rounded-lg transition-all"
-              style={{ background: lightColors.primary, color: '#fff' }}
+            <a href="#inquiry" className="text-sm font-semibold px-5 py-2.5 rounded-lg transition-all"
+              style={{ background: lc.primary, color: '#fff' }}
             >
               Book Now
             </a>
           </div>
-          <a href="/contact" className="md:hidden text-xs font-semibold px-4 py-2 rounded-lg"
-            style={{ background: lightColors.primary, color: '#fff' }}>
+          <a href="#inquiry" className="md:hidden text-xs font-semibold px-4 py-2 rounded-lg"
+            style={{ background: lc.primary, color: '#fff' }}>
             Book
           </a>
         </div>
       </header>
 
       {/* ===== Hero ===== */}
-      <section style={{ paddingTop: '120px', paddingBottom: '60px', background: `linear-gradient(180deg, ${lightColors.primaryLight} 0%, ${lightColors.bg} 100%)`, position: 'relative', overflow: 'hidden' }}>
-        {/* Decorative shapes */}
-        <div style={{ position: 'absolute', top: '-100px', right: '-100px', width: '400px', height: '400px', borderRadius: '50%', background: `radial-gradient(circle, ${lightColors.primaryLight} 0%, transparent 70%)`, opacity: 0.6 }} />
-        <div style={{ position: 'absolute', bottom: '-80px', left: '-80px', width: '300px', height: '300px', borderRadius: '50%', background: `radial-gradient(circle, ${lightColors.goldLight} 0%, transparent 70%)`, opacity: 0.5 }} />
+      <section style={{ paddingTop: '120px', paddingBottom: '60px', background: `linear-gradient(180deg, ${lc.primaryLight} 0%, ${lc.bg} 100%)`, position: 'relative', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', top: '-100px', right: '-100px', width: '400px', height: '400px', borderRadius: '50%', background: `radial-gradient(circle, ${lc.primaryLight} 0%, transparent 70%)`, opacity: 0.6 }} />
+        <div style={{ position: 'absolute', bottom: '-80px', left: '-80px', width: '300px', height: '300px', borderRadius: '50%', background: `radial-gradient(circle, ${lc.goldLight} 0%, transparent 70%)`, opacity: 0.5 }} />
 
         <div className="container relative z-10 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6"
-            style={{ background: '#fff', border: `1px solid ${lightColors.border}`, boxShadow: '0 2px 12px rgba(0,0,0,0.04)' }}>
-            <span className="text-sm font-semibold" style={{ color: lightColors.primary }}>📅 Umrah Season 2026</span>
-            <span className="text-sm" style={{ color: lightColors.textFaint }}>|</span>
-            <span className="text-sm" style={{ color: lightColors.textDim }}>Now booking</span>
+            style={{ background: '#fff', border: `1px solid ${lc.border}`, boxShadow: '0 2px 12px rgba(0,0,0,0.04)' }}>
+            <span className="text-sm font-semibold" style={{ color: lc.primary }}>📅 Umrah Season 2026</span>
+            <span className="text-sm" style={{ color: lc.textFaint }}>|</span>
+            <span className="text-sm" style={{ color: lc.textDim }}>Now booking</span>
           </div>
 
-          <h1 className="mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontFamily: 'var(--font-playfair), serif', fontWeight: 700, color: lightColors.text, lineHeight: 1.15 }}>
-            Umrah Packages from <span style={{ color: lightColors.primary }}>Riyadh</span> & <span style={{ color: lightColors.primary }}>Lahore</span>
+          <h1 className="mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontFamily: 'var(--font-playfair), serif', fontWeight: 700, color: lc.text, lineHeight: 1.15 }}>
+            Umrah Packages from <span style={{ color: lc.primary }}>Riyadh</span> & <span style={{ color: lc.primary }}>Lahore</span>
           </h1>
-          <p className="max-w-2xl mx-auto mb-8" style={{ fontSize: '1.05rem', color: lightColors.textDim, lineHeight: 1.7 }}>
+          <p className="max-w-2xl mx-auto mb-8" style={{ fontSize: '1.05rem', color: lc.textDim, lineHeight: 1.7 }}>
             Choose from 3-day express packages to 14-day premium journeys. Hotels near Haram, bus or flight transport, Ziyarat tours, and experienced guides — all included.
           </p>
 
-          {/* Stats row */}
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 mb-4">
             {[
               { num: '4', label: 'Package Options' },
               { num: '3-14', label: 'Days Duration' },
-              { num: '4★', label: 'Hotel Quality' },
               { num: '100%', label: 'Halal Service' },
+              { num: 'Weekly', label: 'Departures' },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-2xl font-bold" style={{ color: lightColors.primary, fontFamily: 'var(--font-playfair), serif' }}>{stat.num}</div>
-                <div className="text-xs" style={{ color: lightColors.textFaint }}>{stat.label}</div>
+                <div className="text-2xl font-bold" style={{ color: lc.primary, fontFamily: 'var(--font-playfair), serif' }}>{stat.num}</div>
+                <div className="text-xs" style={{ color: lc.textFaint }}>{stat.label}</div>
               </div>
             ))}
           </div>
@@ -364,7 +402,7 @@ export default function PackagesClient() {
       </section>
 
       {/* ===== Filter Tabs ===== */}
-      <div style={{ background: '#fff', borderBottom: `1px solid ${lightColors.border}`, position: 'sticky', top: '68px', zIndex: 100 }}>
+      <div style={{ background: '#fff', borderBottom: `1px solid ${lc.border}`, position: 'sticky', top: '68px', zIndex: 100 }}>
         <div className="container py-4">
           <div className="flex items-center gap-2 sm:gap-3 justify-center">
             {([
@@ -377,9 +415,9 @@ export default function PackagesClient() {
                 onClick={() => setActiveTab(tab.id)}
                 className="text-xs sm:text-sm font-semibold px-4 sm:px-6 py-2.5 rounded-full transition-all duration-300"
                 style={{
-                  background: activeTab === tab.id ? lightColors.primary : '#f1f5f9',
-                  color: activeTab === tab.id ? '#fff' : lightColors.textDim,
-                  border: `1px solid ${activeTab === tab.id ? lightColors.primary : lightColors.border}`,
+                  background: activeTab === tab.id ? lc.primary : '#f1f5f9',
+                  color: activeTab === tab.id ? '#fff' : lc.textDim,
+                  border: `1px solid ${activeTab === tab.id ? lc.primary : lc.border}`,
                 }}
               >
                 {tab.label} <span style={{ opacity: 0.6 }}>({tab.count})</span>
@@ -398,10 +436,10 @@ export default function PackagesClient() {
                 key={pkg.id}
                 className="rounded-2xl overflow-hidden transition-all duration-500"
                 style={{
-                  background: lightColors.card,
-                  border: `1px solid ${lightColors.border}`,
+                  background: lc.card,
+                  border: `1px solid ${lc.border}`,
                   boxShadow: pkg.popular
-                    ? `0 12px 48px rgba(13, 124, 78, 0.12), 0 0 0 2px ${lightColors.primary}`
+                    ? `0 12px 48px rgba(13, 124, 78, 0.12), 0 0 0 2px ${lc.primary}`
                     : '0 4px 24px rgba(0,0,0,0.06)',
                   opacity: 0,
                   animation: `lightReveal 0.6s cubic-bezier(0.16,1,0.3,1) ${idx * 100}ms forwards`,
@@ -410,13 +448,13 @@ export default function PackagesClient() {
                 {/* Card header */}
                 <div style={{
                   background: pkg.popular
-                    ? `linear-gradient(135deg, ${lightColors.primary} 0%, #0a6b40 100%)`
-                    : `linear-gradient(135deg, ${lightColors.primaryLight} 0%, ${lightColors.goldLight} 100%)`,
+                    ? `linear-gradient(135deg, ${lc.primary} 0%, #0a6b40 100%)`
+                    : `linear-gradient(135deg, ${lc.primaryLight} 0%, ${lc.goldLight} 100%)`,
                   padding: '24px 28px',
                   position: 'relative',
                 }}>
                   {pkg.popular && (
-                    <span style={{ position: 'absolute', top: '16px', right: '16px', background: lightColors.gold, color: '#fff', fontSize: '0.7rem', fontWeight: 700, padding: '4px 12px', borderRadius: '100px', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                    <span style={{ position: 'absolute', top: '16px', right: '16px', background: lc.gold, color: '#fff', fontSize: '0.7rem', fontWeight: 700, padding: '4px 12px', borderRadius: '100px', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
                       ★ Most Popular
                     </span>
                   )}
@@ -426,18 +464,18 @@ export default function PackagesClient() {
                         style={{ background: pkg.popular ? 'rgba(255,255,255,0.2)' : '#fff', color: pkg.popular ? '#fff' : pkg.tagColor }}>
                         {pkg.tag}
                       </span>
-                      <h3 style={{ fontSize: '1.5rem', fontFamily: 'var(--font-playfair), serif', fontWeight: 700, color: pkg.popular ? '#fff' : lightColors.text, marginBottom: '4px' }}>
+                      <h3 style={{ fontSize: '1.5rem', fontFamily: 'var(--font-playfair), serif', fontWeight: 700, color: pkg.popular ? '#fff' : lc.text, marginBottom: '4px' }}>
                         {pkg.duration}
                       </h3>
-                      <p style={{ fontSize: '0.9rem', color: pkg.popular ? 'rgba(255,255,255,0.85)' : lightColors.textDim }}>
+                      <p style={{ fontSize: '0.9rem', color: pkg.popular ? 'rgba(255,255,255,0.85)' : lc.textDim }}>
                         {pkg.origin} → Makkah + Madinah
                       </p>
                     </div>
                     <div className="text-right flex-shrink-0">
-                      <div style={{ fontSize: '1.75rem', fontWeight: 700, fontFamily: 'var(--font-playfair), serif', color: pkg.popular ? '#fff' : lightColors.primary }}>
+                      <div style={{ fontSize: '1.75rem', fontWeight: 700, fontFamily: 'var(--font-playfair), serif', color: pkg.popular ? '#fff' : lc.primary }}>
                         {pkg.price}
                       </div>
-                      <div style={{ fontSize: '0.75rem', color: pkg.popular ? 'rgba(255,255,255,0.7)' : lightColors.textFaint }}>
+                      <div style={{ fontSize: '0.75rem', color: pkg.popular ? 'rgba(255,255,255,0.7)' : lc.textFaint }}>
                         {pkg.priceUnit} · {pkg.priceUSD}
                       </div>
                     </div>
@@ -445,26 +483,36 @@ export default function PackagesClient() {
 
                   {/* Quick info badges */}
                   <div className="flex flex-wrap gap-2 mt-3">
-                    <span className="text-xs px-3 py-1.5 rounded-lg" style={{ background: pkg.popular ? 'rgba(255,255,255,0.15)' : '#fff', color: pkg.popular ? '#fff' : lightColors.textDim }}>
+                    <span className="text-xs px-3 py-1.5 rounded-lg" style={{ background: pkg.popular ? 'rgba(255,255,255,0.15)' : '#fff', color: pkg.popular ? '#fff' : lc.textDim }}>
                       {pkg.transport === 'Bus' ? '🚌 By Bus' : '✈️ By Flight'}
                     </span>
-                    <span className="text-xs px-3 py-1.5 rounded-lg" style={{ background: pkg.popular ? 'rgba(255,255,255,0.15)' : '#fff', color: pkg.popular ? '#fff' : lightColors.textDim }}>
+                    <span className="text-xs px-3 py-1.5 rounded-lg" style={{ background: pkg.popular ? 'rgba(255,255,255,0.15)' : '#fff', color: pkg.popular ? '#fff' : lc.textDim }}>
                       🏨 Hotel Included
                     </span>
-                    <span className="text-xs px-3 py-1.5 rounded-lg" style={{ background: pkg.popular ? 'rgba(255,255,255,0.15)' : '#fff', color: pkg.popular ? '#fff' : lightColors.textDim }}>
+                    <span className="text-xs px-3 py-1.5 rounded-lg" style={{ background: pkg.popular ? 'rgba(255,255,255,0.15)' : '#fff', color: pkg.popular ? '#fff' : lc.textDim }}>
                       🕌 Ziyarat Tour
                     </span>
+                    {pkg.visaIncluded && (
+                      <span className="text-xs px-3 py-1.5 rounded-lg" style={{ background: pkg.popular ? 'rgba(255,255,255,0.2)' : lc.primaryLight, color: pkg.popular ? '#fff' : lc.primary, fontWeight: 600 }}>
+                        ✓ Visa Included
+                      </span>
+                    )}
+                    {pkg.weeklyDeparture && (
+                      <span className="text-xs px-3 py-1.5 rounded-lg" style={{ background: pkg.popular ? 'rgba(255,255,255,0.2)' : lc.primaryLight, color: pkg.popular ? '#fff' : lc.primary, fontWeight: 600 }}>
+                        📅 Weekly Departures
+                      </span>
+                    )}
                   </div>
                 </div>
 
                 {/* Card body */}
                 <div style={{ padding: '24px 28px' }}>
                   {/* Highlights */}
-                  <h4 className="text-sm font-bold mb-3" style={{ color: lightColors.text }}>Package Highlights</h4>
+                  <h4 className="text-sm font-bold mb-3" style={{ color: lc.text }}>Package Highlights</h4>
                   <ul className="space-y-2.5 mb-6">
                     {pkg.highlights.map((h, i) => (
-                      <li key={i} className="flex items-start gap-2.5 text-sm" style={{ color: lightColors.textDim }}>
-                        <span style={{ color: lightColors.primary, fontWeight: 700, fontSize: '0.85rem', marginTop: '1px' }}>✓</span>
+                      <li key={i} className="flex items-start gap-2.5 text-sm" style={{ color: lc.textDim }}>
+                        <span style={{ color: lc.primary, fontWeight: 700, fontSize: '0.85rem', marginTop: '1px' }}>✓</span>
                         {h}
                       </li>
                     ))}
@@ -472,13 +520,13 @@ export default function PackagesClient() {
 
                   {/* Hotel info */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                    <div className="p-3 rounded-xl" style={{ background: lightColors.bgAlt }}>
-                      <div className="text-xs font-semibold mb-1" style={{ color: lightColors.textFaint, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Makkah Hotel</div>
-                      <div className="text-sm font-medium" style={{ color: lightColors.text }}>{pkg.hotelMakkah}</div>
+                    <div className="p-3 rounded-xl" style={{ background: lc.bgAlt }}>
+                      <div className="text-xs font-semibold mb-1" style={{ color: lc.textFaint, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Makkah</div>
+                      <div className="text-sm font-medium" style={{ color: lc.text }}>{pkg.hotelMakkah}</div>
                     </div>
-                    <div className="p-3 rounded-xl" style={{ background: lightColors.bgAlt }}>
-                      <div className="text-xs font-semibold mb-1" style={{ color: lightColors.textFaint, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Madinah Hotel</div>
-                      <div className="text-sm font-medium" style={{ color: lightColors.text }}>{pkg.hotelMadinah}</div>
+                    <div className="p-3 rounded-xl" style={{ background: lc.bgAlt }}>
+                      <div className="text-xs font-semibold mb-1" style={{ color: lc.textFaint, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Madinah</div>
+                      <div className="text-sm font-medium" style={{ color: lc.text }}>{pkg.hotelMadinah}</div>
                     </div>
                   </div>
 
@@ -486,12 +534,12 @@ export default function PackagesClient() {
                   <button
                     onClick={() => setExpandedId(expandedId === pkg.id ? null : pkg.id)}
                     className="w-full flex items-center justify-between py-3 px-4 rounded-xl transition-all"
-                    style={{ background: lightColors.primaryLight, border: `1px solid ${lightColors.border}` }}
+                    style={{ background: lc.primaryLight, border: `1px solid ${lc.border}` }}
                   >
-                    <span className="text-sm font-semibold" style={{ color: lightColors.primary }}>
+                    <span className="text-sm font-semibold" style={{ color: lc.primary }}>
                       📋 View {pkg.days}-Day Itinerary
                     </span>
-                    <span style={{ color: lightColors.primary, transition: 'transform 0.3s', transform: expandedId === pkg.id ? 'rotate(180deg)' : 'none' }}>
+                    <span style={{ color: lc.primary, transition: 'transform 0.3s', transform: expandedId === pkg.id ? 'rotate(180deg)' : 'none' }}>
                       ▼
                     </span>
                   </button>
@@ -499,17 +547,17 @@ export default function PackagesClient() {
                   {expandedId === pkg.id && (
                     <div className="mt-4 space-y-3">
                       {pkg.itinerary.map((item, i) => (
-                        <div key={i} className="flex gap-3 p-3 rounded-xl" style={{ background: lightColors.bgAlt }}>
+                        <div key={i} className="flex gap-3 p-3 rounded-xl" style={{ background: lc.bgAlt }}>
                           <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-lg"
-                            style={{ background: '#fff', border: `1px solid ${lightColors.border}` }}>
+                            style={{ background: '#fff', border: `1px solid ${lc.border}` }}>
                             {item.icon}
                           </div>
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-1">
-                              <span className="text-xs font-bold px-2 py-0.5 rounded" style={{ background: lightColors.primary, color: '#fff' }}>{item.day}</span>
-                              <span className="text-sm font-semibold" style={{ color: lightColors.text }}>{item.title}</span>
+                              <span className="text-xs font-bold px-2 py-0.5 rounded" style={{ background: lc.primary, color: '#fff' }}>{item.day}</span>
+                              <span className="text-sm font-semibold" style={{ color: lc.text }}>{item.title}</span>
                             </div>
-                            <p className="text-xs leading-relaxed" style={{ color: lightColors.textDim }}>{item.desc}</p>
+                            <p className="text-xs leading-relaxed" style={{ color: lc.textDim }}>{item.desc}</p>
                           </div>
                         </div>
                       ))}
@@ -517,21 +565,21 @@ export default function PackagesClient() {
                       {/* Inclusions / Exclusions */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
                         <div>
-                          <h5 className="text-xs font-bold mb-2" style={{ color: lightColors.primary, textTransform: 'uppercase', letterSpacing: '0.05em' }}>✓ What's Included</h5>
+                          <h5 className="text-xs font-bold mb-2" style={{ color: lc.primary, textTransform: 'uppercase', letterSpacing: '0.05em' }}>✓ What's Included</h5>
                           <ul className="space-y-1.5">
                             {pkg.inclusions.map((inc, i) => (
-                              <li key={i} className="text-xs flex items-start gap-2" style={{ color: lightColors.textDim }}>
-                                <span style={{ color: lightColors.primary }}>✓</span> {inc}
+                              <li key={i} className="text-xs flex items-start gap-2" style={{ color: lc.textDim }}>
+                                <span style={{ color: lc.primary }}>✓</span> {inc}
                               </li>
                             ))}
                           </ul>
                         </div>
                         <div>
-                          <h5 className="text-xs font-bold mb-2" style={{ color: lightColors.danger, textTransform: 'uppercase', letterSpacing: '0.05em' }}>✗ Not Included</h5>
+                          <h5 className="text-xs font-bold mb-2" style={{ color: lc.danger, textTransform: 'uppercase', letterSpacing: '0.05em' }}>✗ Not Included</h5>
                           <ul className="space-y-1.5">
                             {pkg.exclusions.map((exc, i) => (
-                              <li key={i} className="text-xs flex items-start gap-2" style={{ color: lightColors.textFaint }}>
-                                <span style={{ color: lightColors.danger }}>✗</span> {exc}
+                              <li key={i} className="text-xs flex items-start gap-2" style={{ color: lc.textFaint }}>
+                                <span style={{ color: lc.danger }}>✗</span> {exc}
                               </li>
                             ))}
                           </ul>
@@ -542,12 +590,12 @@ export default function PackagesClient() {
 
                   {/* CTA */}
                   <div className="flex flex-col sm:flex-row gap-3 mt-6">
-                    <a href="/contact" className="flex-1 text-center text-sm font-semibold py-3.5 rounded-xl transition-all"
-                      style={{ background: lightColors.primary, color: '#fff', boxShadow: `0 4px 16px rgba(13,124,78,0.2)` }}>
+                    <a href="#inquiry" className="flex-1 text-center text-sm font-semibold py-3.5 rounded-xl transition-all"
+                      style={{ background: lc.primary, color: '#fff', boxShadow: `0 4px 16px rgba(13,124,78,0.2)` }}>
                       Book This Package
                     </a>
-                    <a href="/contact" className="flex-1 text-center text-sm font-semibold py-3.5 rounded-xl transition-all"
-                      style={{ border: `1px solid ${lightColors.border}`, color: lightColors.text, background: '#fff' }}>
+                    <a href="#inquiry" className="flex-1 text-center text-sm font-semibold py-3.5 rounded-xl transition-all"
+                      style={{ border: `1px solid ${lc.border}`, color: lc.text, background: '#fff' }}>
                       Ask a Question
                     </a>
                   </div>
@@ -559,62 +607,60 @@ export default function PackagesClient() {
       </section>
 
       {/* ===== Route Map Section ===== */}
-      <section style={{ background: '#fff', padding: '64px 0', borderTop: `1px solid ${lightColors.border}` }}>
+      <section style={{ background: '#fff', padding: '64px 0', borderTop: `1px solid ${lc.border}` }}>
         <div className="container text-center">
-          <h2 className="mb-3" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', fontFamily: 'var(--font-playfair), serif', fontWeight: 700, color: lightColors.text }}>
+          <h2 className="mb-3" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', fontFamily: 'var(--font-playfair), serif', fontWeight: 700, color: lc.text }}>
             Your Spiritual Journey Route
           </h2>
-          <p className="max-w-xl mx-auto mb-10" style={{ fontSize: '0.95rem', color: lightColors.textDim }}>
+          <p className="max-w-xl mx-auto mb-10" style={{ fontSize: '0.95rem', color: lc.textDim }}>
             Every package covers the sacred route from your city to Makkah and Madinah.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {/* Riyadh route */}
-            <div className="p-6 rounded-2xl" style={{ background: lightColors.primaryLight, border: `1px solid ${lightColors.border}` }}>
-              <h3 className="text-lg font-bold mb-4" style={{ color: lightColors.primary, fontFamily: 'var(--font-playfair), serif' }}>
+            <div className="p-6 rounded-2xl" style={{ background: lc.primaryLight, border: `1px solid ${lc.border}` }}>
+              <h3 className="text-lg font-bold mb-4" style={{ color: lc.primary, fontFamily: 'var(--font-playfair), serif' }}>
                 🚌 From Riyadh (by Bus)
               </h3>
-              <div className="flex items-center justify-center gap-2 flex-wrap text-sm" style={{ color: lightColors.textDim }}>
-                <span className="font-semibold px-3 py-1.5 rounded-lg" style={{ background: '#fff', color: lightColors.text }}>Riyadh</span>
+              <div className="flex items-center justify-center gap-2 flex-wrap text-sm" style={{ color: lc.textDim }}>
+                <span className="font-semibold px-3 py-1.5 rounded-lg" style={{ background: '#fff', color: lc.text }}>Riyadh</span>
                 <span>→</span>
-                <span className="font-semibold px-3 py-1.5 rounded-lg" style={{ background: '#fff', color: lightColors.text }}>Makkah</span>
+                <span className="font-semibold px-3 py-1.5 rounded-lg" style={{ background: '#fff', color: lc.text }}>Makkah</span>
                 <span>→</span>
-                <span className="font-semibold px-3 py-1.5 rounded-lg" style={{ background: '#fff', color: lightColors.text }}>Madinah</span>
+                <span className="font-semibold px-3 py-1.5 rounded-lg" style={{ background: '#fff', color: lc.text }}>Madinah</span>
                 <span>→</span>
-                <span className="font-semibold px-3 py-1.5 rounded-lg" style={{ background: '#fff', color: lightColors.text }}>Riyadh</span>
+                <span className="font-semibold px-3 py-1.5 rounded-lg" style={{ background: '#fff', color: lc.text }}>Riyadh</span>
               </div>
-              <p className="text-xs mt-4" style={{ color: lightColors.textFaint }}>Approx. 7 hours Riyadh → Makkah · 5 hours Makkah → Madinah</p>
+              <p className="text-xs mt-4" style={{ color: lc.textFaint }}>Approx. 7 hours Riyadh → Makkah · 5 hours Makkah → Madinah</p>
             </div>
 
-            {/* Lahore route */}
-            <div className="p-6 rounded-2xl" style={{ background: lightColors.goldLight, border: `1px solid ${lightColors.border}` }}>
+            <div className="p-6 rounded-2xl" style={{ background: lc.goldLight, border: `1px solid ${lc.border}` }}>
               <h3 className="text-lg font-bold mb-4" style={{ color: '#b8860b', fontFamily: 'var(--font-playfair), serif' }}>
                 ✈️ From Lahore (by Flight)
               </h3>
-              <div className="flex items-center justify-center gap-2 flex-wrap text-sm" style={{ color: lightColors.textDim }}>
-                <span className="font-semibold px-3 py-1.5 rounded-lg" style={{ background: '#fff', color: lightColors.text }}>Lahore</span>
+              <div className="flex items-center justify-center gap-2 flex-wrap text-sm" style={{ color: lc.textDim }}>
+                <span className="font-semibold px-3 py-1.5 rounded-lg" style={{ background: '#fff', color: lc.text }}>Lahore</span>
                 <span>→</span>
-                <span className="font-semibold px-3 py-1.5 rounded-lg" style={{ background: '#fff', color: lightColors.text }}>Jeddah</span>
+                <span className="font-semibold px-3 py-1.5 rounded-lg" style={{ background: '#fff', color: lc.text }}>Jeddah</span>
                 <span>→</span>
-                <span className="font-semibold px-3 py-1.5 rounded-lg" style={{ background: '#fff', color: lightColors.text }}>Makkah</span>
+                <span className="font-semibold px-3 py-1.5 rounded-lg" style={{ background: '#fff', color: lc.text }}>Makkah</span>
                 <span>→</span>
-                <span className="font-semibold px-3 py-1.5 rounded-lg" style={{ background: '#fff', color: lightColors.text }}>Madinah</span>
+                <span className="font-semibold px-3 py-1.5 rounded-lg" style={{ background: '#fff', color: lc.text }}>Madinah</span>
                 <span>→</span>
-                <span className="font-semibold px-3 py-1.5 rounded-lg" style={{ background: '#fff', color: lightColors.text }}>Lahore</span>
+                <span className="font-semibold px-3 py-1.5 rounded-lg" style={{ background: '#fff', color: lc.text }}>Lahore</span>
               </div>
-              <p className="text-xs mt-4" style={{ color: lightColors.textFaint }}>Flight: Lahore → Jeddah · Transfer: Jeddah → Makkah (1.5 hrs)</p>
+              <p className="text-xs mt-4" style={{ color: lc.textFaint }}>Flight: Lahore → Jeddah · Transfer: Jeddah → Makkah (1.5 hrs)</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* ===== Why Choose Us ===== */}
-      <section style={{ background: lightColors.bgAlt, padding: '64px 0' }}>
+      <section style={{ background: lc.bgAlt, padding: '64px 0' }}>
         <div className="container text-center">
-          <h2 className="mb-3" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', fontFamily: 'var(--font-playfair), serif', fontWeight: 700, color: lightColors.text }}>
+          <h2 className="mb-3" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', fontFamily: 'var(--font-playfair), serif', fontWeight: 700, color: lc.text }}>
             Why Book With EzUmrah?
           </h2>
-          <p className="max-w-xl mx-auto mb-10" style={{ fontSize: '0.95rem', color: lightColors.textDim }}>
+          <p className="max-w-xl mx-auto mb-10" style={{ fontSize: '0.95rem', color: lc.textDim }}>
             Trusted by 850+ travel agencies worldwide. We handle every detail so you can focus on your spiritual journey.
           </p>
 
@@ -626,34 +672,126 @@ export default function PackagesClient() {
               { icon: '💬', title: '24/7 Support', desc: 'WhatsApp support throughout your journey' },
             ].map((item, i) => (
               <div key={i} className="p-6 rounded-2xl text-center transition-all duration-300"
-                style={{ background: '#fff', border: `1px solid ${lightColors.border}`, boxShadow: '0 2px 12px rgba(0,0,0,0.04)' }}>
+                style={{ background: '#fff', border: `1px solid ${lc.border}`, boxShadow: '0 2px 12px rgba(0,0,0,0.04)' }}>
                 <div className="text-3xl mb-3">{item.icon}</div>
-                <h3 className="text-sm font-bold mb-2" style={{ color: lightColors.text }}>{item.title}</h3>
-                <p className="text-xs" style={{ color: lightColors.textDim }}>{item.desc}</p>
+                <h3 className="text-sm font-bold mb-2" style={{ color: lc.text }}>{item.title}</h3>
+                <p className="text-xs" style={{ color: lc.textDim }}>{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ===== CTA ===== */}
-      <section style={{ background: `linear-gradient(135deg, ${lightColors.primary} 0%, #0a6b40 100%)`, padding: '64px 0' }}>
-        <div className="container text-center">
-          <h2 className="mb-4" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', fontFamily: 'var(--font-playfair), serif', fontWeight: 700, color: '#fff' }}>
-            Ready to Begin Your Spiritual Journey?
-          </h2>
-          <p className="max-w-xl mx-auto mb-8" style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.85)' }}>
-            Contact us today to book your Umrah package. Our team will guide you through visa requirements, payment options, and departure dates.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="text-sm font-semibold py-3.5 px-8 rounded-xl transition-all"
-              style={{ background: '#fff', color: lightColors.primary }}>
-              📩 Contact Us to Book
-            </a>
-            <a href="/" className="text-sm font-semibold py-3.5 px-8 rounded-xl transition-all"
-              style={{ border: '1px solid rgba(255,255,255,0.4)', color: '#fff', background: 'transparent' }}>
-              Learn About Our CRM
-            </a>
+      {/* ===== Inquiry Form ===== */}
+      <section id="inquiry" style={{ background: `linear-gradient(135deg, ${lc.primary} 0%, #0a6b40 100%)`, padding: '64px 0' }}>
+        <div className="container">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="mb-3" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', fontFamily: 'var(--font-playfair), serif', fontWeight: 700, color: '#fff' }}>
+                Book Your Umrah Package
+              </h2>
+              <p className="max-w-lg mx-auto" style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.85)' }}>
+                Fill out the form below and our team will get back to you within 24 hours with availability, pricing confirmation, and next steps.
+              </p>
+            </div>
+
+            <form onSubmit={handleInquiry} className="rounded-2xl p-6 sm:p-8 space-y-5" style={{ background: '#fff' }}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label className="block text-sm font-medium mb-2" style={{ color: lc.text }}>Full Name *</label>
+                  <input type="text" name="name" required placeholder="Your full name"
+                    className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all"
+                    style={inputStyle}
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-2" style={{ color: lc.text }}>Email Address *</label>
+                  <input type="email" name="email" required placeholder="you@example.com"
+                    className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all"
+                    style={inputStyle}
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label className="block text-sm font-medium mb-2" style={{ color: lc.text }}>WhatsApp Number *</label>
+                  <input type="tel" name="whatsapp_number" required placeholder="+44 7xx xxx xxxx"
+                    className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all"
+                    style={inputStyle}
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-2" style={{ color: lc.text }}>Country *</label>
+                  <select name="country" required className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all"
+                    style={inputStyle} defaultValue="">
+                    <option value="" disabled>Select your country</option>
+                    {inquiryCountries.map((country) => (
+                      <option key={country} value={country} style={{ background: '#fff' }}>{country}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label className="block text-sm font-medium mb-2" style={{ color: lc.text }}>Package of Interest *</label>
+                  <select name="package" required className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all"
+                    style={inputStyle} defaultValue="">
+                    <option value="" disabled>Select a package</option>
+                    <option value="3-Day Express — Riyadh by Bus (SAR 950)" style={{ background: '#fff' }}>3-Day Express — Riyadh by Bus (SAR 950)</option>
+                    <option value="5-Day Value — Riyadh by Bus (SAR 1,450)" style={{ background: '#fff' }}>5-Day Value — Riyadh by Bus (SAR 1,450)</option>
+                    <option value="7-Day — Lahore by Flight (PKR 165,000)" style={{ background: '#fff' }}>7-Day — Lahore by Flight (PKR 165,000)</option>
+                    <option value="14-Day Premium — Lahore by Flight (PKR 295,000)" style={{ background: '#fff' }}>14-Day Premium — Lahore by Flight (PKR 295,000)</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-2" style={{ color: lc.text }}>Number of People *</label>
+                  <select name="travelers" required className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all"
+                    style={inputStyle} defaultValue="">
+                    <option value="" disabled>How many people?</option>
+                    <option value="1 person" style={{ background: '#fff' }}>1 person</option>
+                    <option value="2 people" style={{ background: '#fff' }}>2 people</option>
+                    <option value="3-5 people" style={{ background: '#fff' }}>3-5 people</option>
+                    <option value="6-10 people" style={{ background: '#fff' }}>6-10 people</option>
+                    <option value="10+ people (group)" style={{ background: '#fff' }}>10+ people (group)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-2" style={{ color: lc.text }}>Preferred Travel Date</label>
+                <input type="date" name="preferred_date"
+                  className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all"
+                  style={inputStyle}
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-2" style={{ color: lc.text }}>Additional Notes</label>
+                <textarea name="message" rows={4} placeholder="Any special requirements, questions, or preferences..."
+                  className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all resize-none"
+                  style={inputStyle}
+                />
+              </div>
+
+              <button type="submit" disabled={inquiryStatus === 'sending'}
+                className="w-full text-sm font-semibold py-4 rounded-xl transition-all"
+                style={{ background: lc.primary, color: '#fff', boxShadow: `0 4px 16px rgba(13,124,78,0.2)` }}>
+                {inquiryStatus === 'sending' ? 'Sending...' : '📩 Send Inquiry'}
+              </button>
+
+              {inquiryStatus === 'success' && (
+                <div className="text-sm text-center p-4 rounded-xl" style={{ background: lc.primaryLight, color: lc.primary }}>
+                  ✅ Thank you! Your inquiry has been sent. We&apos;ll get back to you within 24 hours.
+                </div>
+              )}
+              {inquiryStatus === 'error' && (
+                <div className="text-sm text-center p-4 rounded-xl" style={{ background: lc.dangerLight, color: lc.danger }}>
+                  Something went wrong. Please try again or contact us directly.
+                </div>
+              )}
+            </form>
           </div>
         </div>
       </section>
@@ -691,7 +829,7 @@ export default function PackagesClient() {
               <h4 className="text-sm font-bold mb-3" style={{ color: '#fff', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Get in Touch</h4>
               <p className="text-sm mb-2" style={{ color: '#94a3b8' }}>We respond within 4 business hours.</p>
               <a href="/contact" className="inline-block text-sm font-semibold px-5 py-2.5 rounded-lg transition-all"
-                style={{ background: lightColors.primary, color: '#fff' }}>
+                style={{ background: lc.primary, color: '#fff' }}>
                 Contact Us
               </a>
             </div>
@@ -704,7 +842,6 @@ export default function PackagesClient() {
         </div>
       </footer>
 
-      {/* Keyframes for light reveal */}
       <style>{`
         @keyframes lightReveal {
           from { opacity: 0; transform: translateY(24px); }
