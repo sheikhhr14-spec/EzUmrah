@@ -50,7 +50,7 @@ export default function ContactClient() {
 
   return (
     <div className="max-w-2xl mx-auto">
-      <div className="glass-card p-6 sm:p-8 mb-6 reveal" data-reveal="fade-up">
+      <div className="glass-card p-6 sm:p-8 mb-6">
         <h2 className="text-lg font-semibold mb-3" style={{ color: 'var(--cream)', fontFamily: 'var(--font-playfair), serif' }}>
           We&apos;d Love to Hear From You
         </h2>
@@ -75,7 +75,7 @@ export default function ContactClient() {
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="glass-card p-6 sm:p-8 space-y-5 reveal" data-reveal="fade-up" data-reveal-delay="100">
+      <form onSubmit={handleSubmit} className="glass-card p-6 sm:p-8 space-y-5">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <div>
             <label className="block text-sm font-medium mb-2" style={{ color: 'var(--cream)' }}>Full Name *</label>
