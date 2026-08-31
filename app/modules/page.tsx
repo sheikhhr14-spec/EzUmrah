@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CookieConsent from '@/components/CookieConsent';
 import ChatFloat from '@/components/ChatFloat';
+import ScrollReveal from '@/components/ScrollReveal';
 
 export const metadata: Metadata = {
   title: 'CRM Modules — 9 Tools for Umrah & Hajj Travel Agencies',
@@ -75,7 +76,7 @@ export default function ModulesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {modules.map((mod, i) => (
-              <div key={i} className="glass-card p-8 fade-up" style={{ animationDelay: `${i * 0.05}s` }}>
+              <div key={i} className="glass-card p-8" style={{ animationDelay: `${i * 0.05}s` }}>
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-14 h-14 rounded-xl flex items-center justify-center text-3xl flex-shrink-0" style={{ background: 'rgba(201,168,76,0.08)', border: '1px solid var(--border)' }}>
                     {mod.icon}

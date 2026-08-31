@@ -8,7 +8,7 @@ const countries = [
   'South Africa', 'Morocco', 'Algeria', 'Tunisia', 'Jordan', 'Lebanon', 'Iraq',
   'Kuwait', 'Qatar', 'Bahrain', 'Oman', 'Yemen', 'Sudan', 'Libya', 'Mauritania',
   'Senegal', 'Gambia', 'Mali', 'Chad', 'Niger', 'Ghana', 'Kenya', 'Tanzania',
-  'Uganda', 'Ethiopia', 'Somalia', 'Afghanistan', 'Iran', 'Iraq', 'Syria',
+  'Uganda', 'Ethiopia', 'Somalia', 'Afghanistan', 'Iran', 'Syria',
   'Palestine', 'Brunei', 'Singapore', 'Thailand', 'Philippines', 'Vietnam',
   'Australia', 'New Zealand', 'Canada', 'Germany', 'France', 'Spain', 'Italy',
   'Netherlands', 'Belgium', 'Switzerland', 'Sweden', 'Norway', 'Denmark',
@@ -50,7 +50,7 @@ export default function ContactClient() {
 
   return (
     <div className="max-w-2xl mx-auto">
-      <div className="glass-card p-8 mb-6">
+      <div className="glass-card p-6 sm:p-8 mb-6 reveal" data-reveal="fade-up">
         <h2 className="text-lg font-semibold mb-3" style={{ color: 'var(--cream)', fontFamily: 'var(--font-playfair), serif' }}>
           We&apos;d Love to Hear From You
         </h2>
@@ -75,7 +75,7 @@ export default function ContactClient() {
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="glass-card p-8 space-y-5">
+      <form onSubmit={handleSubmit} className="glass-card p-6 sm:p-8 space-y-5 reveal" data-reveal="fade-up" data-reveal-delay="100">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <div>
             <label className="block text-sm font-medium mb-2" style={{ color: 'var(--cream)' }}>Full Name *</label>
@@ -85,26 +85,35 @@ export default function ContactClient() {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium mb-2" style={{ color: 'var(--cream)' }}>WhatsApp Number *</label>
-            <input type="tel" name="whatsapp_number" required placeholder="+44 7xx xxx xxxx"
+            <label className="block text-sm font-medium mb-2" style={{ color: 'var(--cream)' }}>Email Address *</label>
+            <input type="email" name="email" required placeholder="you@example.com"
               className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all"
               style={inputStyle}
             />
           </div>
         </div>
 
-        <div>
-          <label className="block text-sm font-medium mb-2" style={{ color: 'var(--cream)' }}>Country *</label>
-          <select name="country" required
-            className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all"
-            style={inputStyle}
-            defaultValue=""
-          >
-            <option value="" disabled>Select your country</option>
-            {countries.map((country) => (
-              <option key={country} value={country} style={{ background: '#0b0d16' }}>{country}</option>
-            ))}
-          </select>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label className="block text-sm font-medium mb-2" style={{ color: 'var(--cream)' }}>WhatsApp Number *</label>
+            <input type="tel" name="whatsapp_number" required placeholder="+44 7xx xxx xxxx"
+              className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all"
+              style={inputStyle}
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-2" style={{ color: 'var(--cream)' }}>Country *</label>
+            <select name="country" required
+              className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all"
+              style={inputStyle}
+              defaultValue=""
+            >
+              <option value="" disabled>Select your country</option>
+              {countries.map((country) => (
+                <option key={country} value={country} style={{ background: '#0b0d16' }}>{country}</option>
+              ))}
+            </select>
+          </div>
         </div>
 
         <div>
@@ -128,7 +137,7 @@ export default function ContactClient() {
         </button>
         {status === 'success' && (
           <div className="text-sm text-center p-3 rounded-xl" style={{ background: 'rgba(45, 212, 191, 0.1)', color: 'var(--teal2)' }}>
-            Thank you! Your message has been sent. We&apos;ll get back to you on WhatsApp within 24 hours.
+            Thank you! Your message has been sent. We&apos;ll get back to you within 24 hours.
           </div>
         )}
         {status === 'error' && (
