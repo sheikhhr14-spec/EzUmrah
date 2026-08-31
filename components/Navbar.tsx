@@ -13,6 +13,7 @@ export default function Navbar() {
   }, []);
 
   const links = [
+    { href: '/umrah-packages', label: 'Packages' },
     { href: '/modules', label: 'Modules' },
     { href: '/integrations', label: 'Integrations' },
     { href: '/pricing', label: 'Pricing' },

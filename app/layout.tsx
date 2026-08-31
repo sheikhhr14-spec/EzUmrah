@@ -209,6 +209,27 @@ const jsonLd = [
       { '@type': 'ListItem', position: 7, name: 'Contact', item: `${SITE_URL}/contact` },
     ],
   },
+  // TouristProduct — Umrah packages for AI/SEO
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristProduct",
+    name: "EzUmrah Umrah Packages 2026",
+    url: `${SITE_URL}/umrah-packages`,
+    description: "Affordable Umrah packages from Riyadh and Lahore. 3-day and 5-day bus packages from Riyadh, 7-day and 14-day flight packages from Lahore. Hotels, transport, Ziyarat, and airport transfers included.",
+    offers: [
+      { "@type": "Offer", name: "3-Day Express — Riyadh to Makkah + Madinah by Bus", price: "950", priceCurrency: "SAR" },
+      { "@type": "Offer", name: "5-Day Value — Riyadh to Makkah + Madinah by Bus", price: "1450", priceCurrency: "SAR" },
+      { "@type": "Offer", name: "7-Day Package — Lahore to Makkah + Madinah by Flight", price: "165000", priceCurrency: "PKR" },
+      { "@type": "Offer", name: "14-Day Premium — Lahore to Makkah + Madinah by Flight", price: "295000", priceCurrency: "PKR" },
+    ],
+    areaServed: [
+      { "@type": "Country", name: "Saudi Arabia" },
+      { "@type": "Country", name: "Pakistan" },
+      { "@type": "Country", name: "United Kingdom" },
+      { "@type": "Country", name: "United States" },
+    ],
+  },
+
 ];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
