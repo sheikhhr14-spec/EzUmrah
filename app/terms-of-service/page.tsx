@@ -1,4 +1,8 @@
 import type { Metadata } from 'next';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import CookieConsent from '@/components/CookieConsent';
+import ChatFloat from '@/components/ChatFloat';
 
 export const metadata: Metadata = {
   title: 'Terms of Service',
@@ -7,7 +11,9 @@ export const metadata: Metadata = {
 
 export default function TermsOfService() {
   return (
-    <div className="min-h-screen" style={{ background: 'var(--midnight)', paddingTop: '100px' }}>
+    <>
+      <Navbar />
+      <main className="min-h-screen" style={{ background: 'var(--midnight)', paddingTop: '100px' }}>
       <div className="container max-w-4xl py-16">
         <h1 className="text-3xl md:text-4xl font-bold mb-8" style={{ fontFamily: 'var(--font-playfair), serif', color: 'var(--cream)' }}>Terms of Service</h1>
         <p className="text-sm mb-4" style={{ color: 'var(--text-faint)' }}>Last updated: January 2026</p>
@@ -91,6 +97,10 @@ export default function TermsOfService() {
           <a href="/" className="btn-outline text-sm">← Back to Home</a>
         </div>
       </div>
-    </div>
+      </main>
+      <Footer />
+      <CookieConsent />
+      <ChatFloat />
+    </>
   );
 }

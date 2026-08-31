@@ -1,4 +1,8 @@
 import type { Metadata } from 'next';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import CookieConsent from '@/components/CookieConsent';
+import ChatFloat from '@/components/ChatFloat';
 
 export const metadata: Metadata = {
   title: 'Changelog',
@@ -77,7 +81,9 @@ const typeConfig: Record<string, { label: string; color: string; bg: string }> =
 
 export default function Changelog() {
   return (
-    <div className="min-h-screen" style={{ background: 'var(--midnight)', paddingTop: '100px' }}>
+    <>
+      <Navbar />
+      <main className="min-h-screen" style={{ background: 'var(--midnight)', paddingTop: '100px' }}>
       <div className="container max-w-4xl py-16">
         <h1 className="text-3xl md:text-4xl font-bold mb-4 text-center" style={{ fontFamily: 'var(--font-playfair), serif', color: 'var(--cream)' }}>Changelog</h1>
         <p className="text-center mb-12 max-w-2xl mx-auto" style={{ color: 'var(--text-dim)' }}>Track the latest updates, new features, bug fixes, and improvements to EzUmrah.</p>
@@ -108,6 +114,10 @@ export default function Changelog() {
           ))}
         </div>
       </div>
-    </div>
+      </main>
+      <Footer />
+      <CookieConsent />
+      <ChatFloat />
+    </>
   );
 }
