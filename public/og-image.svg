@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060b14"/>
+      <stop offset="50%" stop-color="#0c1222"/>
+      <stop offset="100%" stop-color="#111a2e"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c9a84c"/>
+      <stop offset="50%" stop-color="#d4b76a"/>
+      <stop offset="100%" stop-color="#e8cfa0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="600" y="280" font-size="72" text-anchor="middle" fill="url(#gold)" font-family="serif" font-weight="bold">EzUmrah</text>
+  <text x="600" y="360" font-size="32" text-anchor="middle" fill="#94a3b8" font-family="sans-serif">Cloud Travel CRM for Umrah &amp; Hajj Agencies</text>
+  <text x="600" y="420" font-size="24" text-anchor="middle" fill="#c9a84c" font-family="sans-serif">Trusted by 850+ Travel Agencies Worldwide</text>
+  <text x="600" y="520" font-size="20" text-anchor="middle" fill="#64748b" font-family="sans-serif">umrah.eztechify.com · by EzTechify</text>
+</svg>
