@@ -1,55 +1,100 @@
 'use client';
 
-// ===== Payment Method SVG Icons =====
+// ===== Payment Method SVG Icons (brand-accurate) =====
+
+// Visa — navy italic wordmark on white card
 const VisaIcon = () => (
-  <svg viewBox="0 0 48 16" width="40" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <text x="0" y="13" fontFamily="Arial, sans-serif" fontSize="14" fontWeight="900" fontStyle="italic" fill="#1A1F71" letterSpacing="0.5">VISA</text>
+  <svg viewBox="0 0 64 22" width="52" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Visa">
+    <rect width="64" height="22" rx="3" fill="#fff" stroke="#e2e8f0" strokeWidth="0.5" />
+    <text x="7" y="16" fontFamily="Arial Black, Arial, sans-serif" fontSize="13" fontWeight="900" fontStyle="italic" fill="#1A1F71" letterSpacing="1">VISA</text>
   </svg>
 );
 
+// Mastercard — two interlocking circles on white card
 const MastercardIcon = () => (
-  <svg viewBox="0 0 40 26" width="38" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="15" cy="13" r="11" fill="#EB001B" />
-    <circle cx="25" cy="13" r="11" fill="#F79E1B" opacity="0.9" />
-    <path d="M20 4.5a11 11 0 0 1 0 17 11 11 0 0 1 0-17z" fill="#FF5F00" />
+  <svg viewBox="0 0 64 22" width="52" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Mastercard">
+    <rect width="64" height="22" rx="3" fill="#fff" stroke="#e2e8f0" strokeWidth="0.5" />
+    <circle cx="26" cy="11" r="7" fill="#EB001B" />
+    <circle cx="38" cy="11" r="7" fill="#F79E1B" />
+    <path d="M32 5.5a7 7 0 0 0 0 11 7 7 0 0 0 0-11z" fill="#FF5F00" />
   </svg>
 );
 
+// American Express — blue card with AMEX
 const AmexIcon = () => (
-  <svg viewBox="0 0 40 26" width="38" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="40" height="26" rx="3" fill="#1F72CD" />
-    <text x="5" y="11" fontFamily="Arial, sans-serif" fontSize="6.5" fontWeight="900" fill="#FFFFFF" letterSpacing="0.3">AMEX</text>
-    <text x="5" y="20" fontFamily="Arial, sans-serif" fontSize="5" fontWeight="700" fill="#FFFFFF" opacity="0.7" letterSpacing="0.5"> EXPRESS</text>
+  <svg viewBox="0 0 64 22" width="52" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="American Express">
+    <rect width="64" height="22" rx="3" fill="#2E77BB" />
+    <text x="8" y="16" fontFamily="Arial Black, Arial, sans-serif" fontSize="10" fontWeight="900" fill="#fff" letterSpacing="1.5">AMEX</text>
   </svg>
 );
 
+// Discover — white card, dark text, orange circle
 const DiscoverIcon = () => (
-  <svg viewBox="0 0 48 16" width="44" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <text x="0" y="12" fontFamily="Arial, sans-serif" fontSize="9" fontWeight="900" fill="#231F20" letterSpacing="0.2">DISC</text>
-    <circle cx="34" cy="8" r="6" fill="#F68121" />
-    <text x="28" y="12" fontFamily="Arial, sans-serif" fontSize="7" fontWeight="900" fill="#FFFFFF">OVER</text>
+  <svg viewBox="0 0 64 22" width="52" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Discover">
+    <rect width="64" height="22" rx="3" fill="#fff" stroke="#e2e8f0" strokeWidth="0.5" />
+    <text x="5" y="15" fontFamily="Arial Black, Arial, sans-serif" fontSize="8" fontWeight="900" fill="#231F20" letterSpacing="0.3">DISCOVER</text>
+    <circle cx="54" cy="11" r="8" fill="#F68121" opacity="0.9" />
   </svg>
 );
 
+// Bitcoin — orange circle with ₿
 const BtcIcon = () => (
-  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="12" cy="12" r="12" fill="#F7931A" />
-    <path d="M15.5 8.2c.2-1.3-.8-2-2.2-2l.4-1.6-1-.2-.4 1.6-.8-.2.4-1.6-1-.2-.4 1.6c-.2 0-.4 0-.6.1l-1.3-.3-.2 1s.8.1.8.1c.4 0 .5.4.5.5l-.2.6-.1.5-.6 2.4c0 .2-.2.4-.5.3l-.8-.2-.4 1.1 1.3.3c.2 0 .5.1.7.1l-.4 1.6 1 .2.4-1.6.8.2-.4 1.6 1 .2.4-1.6c1.7.2 3 .1 3.5-1.3.4-1.1-.2-1.7-1-1.9.5-.3.9-.8.7-1.9zm-1.5 3.8c-.3 1.1-2.2.5-2.8.4l.5-2c.6.1 2.6.4 2.3 1.6zm-.3-3c-.3 1-1.8.5-2.3.4l.5-1.8c.5.1 2.1.3 1.8 1.4z" fill="#FFFFFF" />
+  <svg viewBox="0 0 64 22" width="52" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Bitcoin">
+    <rect width="64" height="22" rx="3" fill="#fff" stroke="#e2e8f0" strokeWidth="0.5" />
+    <circle cx="16" cy="11" r="8" fill="#F7931A" />
+    <text x="12.5" y="15" fontFamily="Arial, sans-serif" fontSize="11" fontWeight="900" fill="#fff">₿</text>
+    <text x="28" y="15" fontFamily="Arial, sans-serif" fontSize="7.5" fontWeight="700" fill="#F7931A" letterSpacing="0.5">BITCOIN</text>
   </svg>
 );
 
+// Solana — three horizontal gradient bars + text
 const SolIcon = () => (
-  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M5.5 8.2c.1-.1.2-.2.4-.2h11.3c.2 0 .3.1.4.2l1.4 1.4c.2.2.2.5 0 .7l-9.3 9.3c-.2.2-.5.2-.7 0l-1.4-1.4c-.1-.1-.1-.2-.1-.3s0-.2.1-.3l7.9-7.9c.1-.1.1-.2.1-.3s0-.2-.1-.3l-1.4-1.4c-.2-.2-.5-.2-.7 0l-7.9 7.9c-.1.1-.2.1-.3.1s-.2 0-.3-.1l-1.4-1.4c-.2-.2-.2-.5 0-.7L5.5 8.2z" fill="#9945FF" />
-    <path d="M8.2 4.5c.1-.1.2-.1.3-.1h11.3c.2 0 .3.1.4.2l1.4 1.4c.2.2.2.5 0 .7l-9.3 9.3c-.2.2-.5.2-.7 0l-1.4-1.4c-.2-.2-.2-.5 0-.7l7.9-7.9c.1-.1.1-.2.1-.3s0-.2-.1-.3l-1.4-1.4c-.2-.2-.5-.2-.7 0l-7.9 7.9c-.1.1-.2.1-.3.1s-.2 0-.3-.1l-1.4-1.4c-.2-.2-.2-.5 0-.7l2.7-2.7z" fill="#14F195" />
+  <svg viewBox="0 0 64 22" width="52" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Solana">
+    <rect width="64" height="22" rx="3" fill="#fff" stroke="#e2e8f0" strokeWidth="0.5" />
+    <g transform="translate(6, 5)">
+      <rect x="0" y="0" width="14" height="2.5" rx="1" fill="#9945FF" />
+      <rect x="0" y="4.5" width="14" height="2.5" rx="1" fill="#19FB9B" />
+      <rect x="0" y="9" width="14" height="2.5" rx="1" fill="#14F195" />
+    </g>
+    <text x="26" y="15" fontFamily="Arial, sans-serif" fontSize="7.5" fontWeight="700" fill="#9945FF" letterSpacing="0.5">SOLANA</text>
   </svg>
 );
 
+// USDT / Tether — green circle with T
 const UsdtIcon = () => (
-  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="12" cy="12" r="12" fill="#26A17B" />
-    <path d="M12 6.5c-2.9 0-5.2.6-5.2 1.3v2c0 .7 2.3 1.3 5.2 1.3s5.2-.6 5.2-1.3v-2c0-.7-2.3-1.3-5.2-1.3z" fill="#FFFFFF" />
-    <path d="M12 12.2c-1.4 0-2.7-.1-3.7-.4v1.8c.9.2 2.1.4 3.2.4v3c0 .2.2.4.5.4s.5-.2.5-.4v-3c1.1 0 2.3-.1 3.2-.4v-1.8c-1 .3-2.3.4-3.7.4z" fill="#FFFFFF" />
+  <svg viewBox="0 0 64 22" width="52" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="USDT">
+    <rect width="64" height="22" rx="3" fill="#fff" stroke="#e2e8f0" strokeWidth="0.5" />
+    <circle cx="16" cy="11" r="8" fill="#26A17B" />
+    <text x="12" y="15" fontFamily="Arial, sans-serif" fontSize="11" fontWeight="900" fill="#fff">T</text>
+    <text x="28" y="15" fontFamily="Arial, sans-serif" fontSize="7.5" fontWeight="700" fill="#26A17B" letterSpacing="0.5">USDT</text>
+  </svg>
+);
+
+// Bank Transfer — bank building with columns
+const BankTransferIcon = () => (
+  <svg viewBox="0 0 64 22" width="52" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Bank Transfer">
+    <rect width="64" height="22" rx="3" fill="#fff" stroke="#e2e8f0" strokeWidth="0.5" />
+    <g transform="translate(5, 3.5)">
+      {/* roof */}
+      <path d="M0 5 L11 0 L22 5 L22 6 L0 6 Z" fill="#475569" />
+      {/* columns */}
+      <rect x="2" y="7" width="2.5" height="7.5" fill="#64748B" />
+      <rect x="6.5" y="7" width="2.5" height="7.5" fill="#64748B" />
+      <rect x="11" y="7" width="2.5" height="7.5" fill="#64748B" />
+      <rect x="15.5" y="7" width="2.5" height="7.5" fill="#64748B" />
+      {/* base */}
+      <rect x="-1" y="14.5" width="24" height="2" rx="0.5" fill="#475569" />
+    </g>
+    <text x="30" y="15" fontFamily="Arial, sans-serif" fontSize="6.5" fontWeight="700" fill="#475569" letterSpacing="0.3">BANK</text>
+    <text x="30" y="13" fontFamily="Arial, sans-serif" fontSize="5.5" fontWeight="600" fill="#94A3B8" letterSpacing="0.3" />
+  </svg>
+);
+
+// Skrill — purple badge with Skrill text
+const SkrillIcon = () => (
+  <svg viewBox="0 0 64 22" width="52" height="18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Skrill">
+    <rect width="64" height="22" rx="3" fill="#862165" />
+    <text x="8" y="16" fontFamily="Arial, sans-serif" fontSize="11" fontWeight="900" fontStyle="italic" fill="#fff" letterSpacing="0.5">Skrill</text>
   </svg>
 );
 
@@ -58,6 +103,8 @@ const paymentMethods = [
   { name: 'Mastercard', icon: <MastercardIcon /> },
   { name: 'American Express', icon: <AmexIcon /> },
   { name: 'Discover', icon: <DiscoverIcon /> },
+  { name: 'Bank Transfer', icon: <BankTransferIcon /> },
+  { name: 'Skrill', icon: <SkrillIcon /> },
   { name: 'Bitcoin', icon: <BtcIcon /> },
   { name: 'Solana', icon: <SolIcon /> },
   { name: 'USDT', icon: <UsdtIcon /> },
@@ -199,17 +246,18 @@ export default function Footer() {
             {paymentMethods.map((method) => (
               <div
                 key={method.name}
-                className="flex items-center justify-center px-3.5 py-2.5 rounded-xl transition-all duration-300"
+                className="flex items-center justify-center transition-all duration-300"
                 style={{
                   background: 'rgba(255, 255, 255, 0.6)',
                   border: '1px solid var(--border)',
-                  minHeight: '42px',
-                  minWidth: '58px',
+                  borderRadius: '10px',
+                  padding: '6px 10px',
+                  minHeight: '32px',
                 }}
                 title={method.name}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.borderColor = 'rgba(184, 146, 63, 0.3)';
-                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.9)';
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.95)';
                   e.currentTarget.style.transform = 'translateY(-2px)';
                   e.currentTarget.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.06)';
                 }}
