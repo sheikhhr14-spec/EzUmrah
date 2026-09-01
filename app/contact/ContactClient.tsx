@@ -43,7 +43,7 @@ export default function ContactClient() {
   };
 
   const inputStyle = {
-    background: 'rgba(7, 8, 13, 0.6)',
+    background: 'rgba(241, 245, 249, 0.8)',
     border: '1px solid var(--border)',
     color: 'var(--text)',
   };
@@ -58,14 +58,14 @@ export default function ContactClient() {
           We serve agencies of all sizes — from startups to large operators handling thousands of pilgrims. Tell us about your agency, your current workflow, and what you&apos;re looking for. We respond within 4 business hours.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="flex items-center gap-3 p-4 rounded-xl" style={{ background: 'rgba(7, 8, 13, 0.5)' }}>
+          <div className="flex items-center gap-3 p-4 rounded-xl" style={{ background: 'rgba(241, 245, 249, 0.8)' }}>
             <div className="text-2xl">⚡</div>
             <div>
               <div className="text-sm font-semibold" style={{ color: 'var(--cream)' }}>Response Time</div>
               <div className="text-xs" style={{ color: 'var(--text-faint)' }}>Within 4 business hours</div>
             </div>
           </div>
-          <div className="flex items-center gap-3 p-4 rounded-xl" style={{ background: 'rgba(7, 8, 13, 0.5)' }}>
+          <div className="flex items-center gap-3 p-4 rounded-xl" style={{ background: 'rgba(241, 245, 249, 0.8)' }}>
             <div className="text-2xl">🌍</div>
             <div>
               <div className="text-sm font-semibold" style={{ color: 'var(--cream)' }}>Global Coverage</div>
@@ -110,7 +110,7 @@ export default function ContactClient() {
             >
               <option value="" disabled>Select your country</option>
               {countries.map((country) => (
-                <option key={country} value={country} style={{ background: '#0b0d16' }}>{country}</option>
+                <option key={country} value={country} style={{ background: '#ffffff' }}>{country}</option>
               ))}
             </select>
           </div>
@@ -136,7 +136,7 @@ export default function ContactClient() {
           {status === 'sending' ? 'Sending...' : 'Send Message'}
         </button>
         {status === 'success' && (
-          <div className="text-sm text-center p-3 rounded-xl" style={{ background: 'rgba(45, 212, 191, 0.1)', color: 'var(--teal2)' }}>
+          <div className="text-sm text-center p-3 rounded-xl" style={{ background: 'rgba(13, 124, 78, 0.1)', color: 'var(--teal2)' }}>
             Thank you! Your message has been sent. We&apos;ll get back to you within 24 hours.
           </div>
         )}

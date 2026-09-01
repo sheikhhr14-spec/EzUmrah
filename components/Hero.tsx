@@ -19,28 +19,28 @@ export default function Hero() {
   ];
 
   const mockupRows = [
-    { initials: 'AK', name: 'Ahmed Khalid', meta: 'Economy Umrah • JED→JFK', status: 'Booked', statusColor: 'rgba(45, 212, 191, 0.15)', textColor: '#2dd4bf' },
-    { initials: 'FH', name: 'Fatima Hassan', meta: 'Medina Combo • Group of 4', status: 'Pending', statusColor: 'rgba(201, 169, 106, 0.15)', textColor: '#d8bd7e' },
+    { initials: 'AK', name: 'Ahmed Khalid', meta: 'Economy Umrah • JED→JFK', status: 'Booked', statusColor: 'rgba(13, 124, 78, 0.15)', textColor: '#0d7c4e' },
+    { initials: 'FH', name: 'Fatima Hassan', meta: 'Medina Combo • Group of 4', status: 'Pending', statusColor: 'rgba(184, 146, 63, 0.15)', textColor: '#d4b27a' },
     { initials: 'OU', name: 'Omar Usman', meta: 'Hajj Package • Group of 12', status: 'Visa', statusColor: 'rgba(96, 165, 250, 0.15)', textColor: '#60a5fa' },
-    { initials: 'MN', name: 'Mariam Nofal', meta: 'Ramadan Umrah • Solo', status: 'Booked', statusColor: 'rgba(45, 212, 191, 0.15)', textColor: '#2dd4bf' },
-    { initials: 'YR', name: 'Yusuf Rahman', meta: 'Holiday Package • Family 5', status: 'Quote', statusColor: 'rgba(201, 169, 106, 0.15)', textColor: '#d8bd7e' },
+    { initials: 'MN', name: 'Mariam Nofal', meta: 'Ramadan Umrah • Solo', status: 'Booked', statusColor: 'rgba(13, 124, 78, 0.15)', textColor: '#0d7c4e' },
+    { initials: 'YR', name: 'Yusuf Rahman', meta: 'Holiday Package • Family 5', status: 'Quote', statusColor: 'rgba(184, 146, 63, 0.15)', textColor: '#d4b27a' },
   ];
 
   return (
     <section
       ref={heroRef}
       className="relative min-h-screen flex items-center overflow-hidden"
-      style={{ background: 'radial-gradient(ellipse 100% 80% at 50% 0%, #0b0d16 0%, #07080d 60%, #07080d 100%)' }}
+      style={{ background: 'radial-gradient(ellipse 100% 80% at 50% 0%, #f1f5f9 0%, #f8fafb 60%, #f8fafb 100%)' }}
     >
       {/* Background layers */}
       <div className="absolute inset-0 islamic-pattern" style={{ opacity: 0.25 }} />
       <div className="absolute inset-0 grid-pattern" />
       {/* Gradient orbs */}
       <div className="absolute top-20 left-10 w-[500px] h-[500px] rounded-full blur-[120px] opacity-30"
-        style={{ background: 'radial-gradient(circle, rgba(201, 169, 106, 0.4) 0%, transparent 70%)' }}
+        style={{ background: 'radial-gradient(circle, rgba(184, 146, 63, 0.4) 0%, transparent 70%)' }}
       />
       <div className="absolute bottom-20 right-10 w-[400px] h-[400px] rounded-full blur-[100px] opacity-20"
-        style={{ background: 'radial-gradient(circle, rgba(45, 212, 191, 0.3) 0%, transparent 70%)' }}
+        style={{ background: 'radial-gradient(circle, rgba(13, 124, 78, 0.3) 0%, transparent 70%)' }}
       />
 
       {/* Top fade */}
@@ -56,8 +56,8 @@ export default function Hero() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8 fade-up"
               style={{
-                background: 'rgba(201, 169, 106, 0.05)',
-                border: '1px solid rgba(201, 169, 106, 0.15)',
+                background: 'rgba(184, 146, 63, 0.05)',
+                border: '1px solid rgba(184, 146, 63, 0.15)',
                 backdropFilter: 'blur(8px)',
               }}
             >
@@ -81,7 +81,7 @@ export default function Hero() {
               Ditch the spreadsheets.
               <br />
               <span style={{
-                background: 'linear-gradient(135deg, #c9a96a 0%, #d8bd7e 40%, #ecd9a3 60%, #d8bd7e 100%)',
+                background: 'linear-gradient(135deg, #b8923f 0%, #d4b27a 40%, #d4b27a 60%, #d4b27a 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 display: 'inline-block',
@@ -121,7 +121,7 @@ export default function Hero() {
                   <div className="text-3xl md:text-4xl font-bold mb-1 tracking-tight"
                     style={{
                       fontFamily: 'var(--font-playfair), serif',
-                      background: 'linear-gradient(135deg, #f8f6f1 0%, #c9a96a 100%)',
+                      background: 'linear-gradient(135deg, #0f172a 0%, #b8923f 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                     }}
@@ -140,26 +140,26 @@ export default function Hero() {
           <div className="fade-up relative" style={{ animationDelay: '0.35s' }}>
             {/* Glow behind card */}
             <div className="absolute -inset-4 rounded-[28px] blur-2xl opacity-30"
-              style={{ background: 'radial-gradient(circle, rgba(201, 169, 106, 0.3) 0%, transparent 70%)' }}
+              style={{ background: 'radial-gradient(circle, rgba(184, 146, 63, 0.3) 0%, transparent 70%)' }}
             />
 
             <div className="relative rounded-[20px] overflow-hidden"
               style={{
-                background: 'linear-gradient(135deg, rgba(17, 20, 32, 0.9) 0%, rgba(11, 13, 22, 0.85) 100%)',
+                background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 251, 0.85) 100%)',
                 backdropFilter: 'blur(20px) saturate(140%)',
-                border: '1px solid rgba(201, 169, 106, 0.12)',
-                boxShadow: '0 24px 80px rgba(0, 0, 0, 0.5), 0 0 60px rgba(201, 169, 106, 0.08)',
+                border: '1px solid rgba(184, 146, 63, 0.12)',
+                boxShadow: '0 24px 80px rgba(0, 0, 0, 0.5), 0 0 60px rgba(184, 146, 63, 0.08)',
               }}
             >
               {/* Browser top bar */}
               <div className="flex items-center gap-2 px-5 py-3.5"
-                style={{ borderBottom: '1px solid rgba(201, 169, 106, 0.06)' }}
+                style={{ borderBottom: '1px solid rgba(184, 146, 63, 0.06)' }}
               >
                 <div className="w-3 h-3 rounded-full" style={{ background: 'rgba(239, 68, 68, 0.6)' }} />
                 <div className="w-3 h-3 rounded-full" style={{ background: 'rgba(234, 179, 8, 0.6)' }} />
                 <div className="w-3 h-3 rounded-full" style={{ background: 'rgba(34, 197, 94, 0.6)' }} />
                 <div className="ml-3 flex items-center gap-2">
-                  <div className="w-4 h-4 rounded-md" style={{ background: 'rgba(201, 169, 106, 0.15)' }} />
+                  <div className="w-4 h-4 rounded-md" style={{ background: 'rgba(184, 146, 63, 0.15)' }} />
                   <span className="text-xs font-medium tracking-wide" style={{ color: 'var(--text-dim)' }}>
                     EzUmrah CRM Dashboard
                   </span>
@@ -174,8 +174,8 @@ export default function Hero() {
                     <button key={tab}
                       className="text-xs font-medium px-3 py-1.5 rounded-lg transition-all duration-300"
                       style={{
-                        background: i === 0 ? 'rgba(201, 169, 106, 0.08)' : 'transparent',
-                        border: i === 0 ? '1px solid rgba(201, 169, 106, 0.15)' : '1px solid transparent',
+                        background: i === 0 ? 'rgba(184, 146, 63, 0.08)' : 'transparent',
+                        border: i === 0 ? '1px solid rgba(184, 146, 63, 0.15)' : '1px solid transparent',
                         color: i === 0 ? 'var(--gold2)' : 'var(--text-faint)',
                       }}
                     >
@@ -192,8 +192,8 @@ export default function Hero() {
                     >
                       <div className="w-9 h-9 rounded-xl flex items-center justify-center text-xs font-bold flex-shrink-0"
                         style={{
-                          background: 'linear-gradient(135deg, rgba(201, 169, 106, 0.2) 0%, rgba(201, 169, 106, 0.05) 100%)',
-                          border: '1px solid rgba(201, 169, 106, 0.1)',
+                          background: 'linear-gradient(135deg, rgba(184, 146, 63, 0.2) 0%, rgba(184, 146, 63, 0.05) 100%)',
+                          border: '1px solid rgba(184, 146, 63, 0.1)',
                           color: 'var(--gold2)',
                         }}
                       >
@@ -217,7 +217,7 @@ export default function Hero() {
                 </div>
 
                 {/* Bottom stats bar */}
-                <div className="flex items-center justify-between mt-5 pt-4" style={{ borderTop: '1px solid rgba(201, 169, 106, 0.06)' }}>
+                <div className="flex items-center justify-between mt-5 pt-4" style={{ borderTop: '1px solid rgba(184, 146, 63, 0.06)' }}>
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full animate-pulse" style={{ background: 'var(--teal2)' }} />
                     <span className="text-xs" style={{ color: 'var(--text-faint)' }}>Live data · Updated 2m ago</span>

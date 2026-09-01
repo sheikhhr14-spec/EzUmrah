@@ -26,11 +26,11 @@ export default function Navbar() {
     <nav
       className="fixed top-0 left-0 right-0 z-[1000] transition-all duration-500"
       style={{
-        background: scrolled ? 'rgba(7, 8, 13, 0.85)' : 'transparent',
+        background: scrolled ? 'rgba(255, 255, 255, 0.80)' : 'transparent',
         backdropFilter: scrolled ? 'blur(24px) saturate(160%)' : 'none',
         WebkitBackdropFilter: scrolled ? 'blur(24px) saturate(160%)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(201, 169, 106, 0.08)' : '1px solid transparent',
-        boxShadow: scrolled ? '0 4px 32px rgba(0, 0, 0, 0.3)' : 'none',
+        borderBottom: scrolled ? '1px solid rgba(0, 0, 0, 0.06)' : '1px solid transparent',
+        boxShadow: scrolled ? '0 4px 32px rgba(0, 0, 0, 0.04)' : 'none',
       }}
     >
       <div className="container flex items-center justify-between" style={{ height: '72px' }}>
@@ -38,18 +38,18 @@ export default function Navbar() {
         <a href="/" className="flex items-center gap-2.5 group">
           <div className="relative w-9 h-9 rounded-xl flex items-center justify-center text-lg transition-all duration-500"
             style={{
-              background: 'linear-gradient(135deg, rgba(201, 169, 106, 0.15) 0%, rgba(201, 169, 106, 0.05) 100%)',
-              border: '1px solid rgba(201, 169, 106, 0.2)',
+              background: 'linear-gradient(135deg, rgba(184, 146, 63, 0.12) 0%, rgba(184, 146, 63, 0.05) 100%)',
+              border: '1px solid rgba(184, 146, 63, 0.2)',
             }}
           >
             🕋
             <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-              style={{ boxShadow: '0 0 20px rgba(201, 169, 106, 0.3)' }}
+              style={{ boxShadow: '0 0 20px rgba(184, 146, 63, 0.2)' }}
             />
           </div>
           <span className="text-lg font-bold tracking-tight" style={{
             fontFamily: 'var(--font-playfair), serif',
-            background: 'linear-gradient(135deg, #f8f6f1 0%, #c9a96a 100%)',
+            background: 'linear-gradient(135deg, #0f172a 0%, #b8923f 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
           }}>
@@ -67,7 +67,7 @@ export default function Navbar() {
               style={{ color: 'var(--text-dim)' }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.color = 'var(--cream)';
-                e.currentTarget.style.background = 'rgba(201, 169, 106, 0.06)';
+                e.currentTarget.style.background = 'rgba(184, 146, 63, 0.06)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.color = 'var(--text-dim)';
@@ -114,9 +114,9 @@ export default function Navbar() {
         <div
           className="flex flex-col gap-1 px-6 py-6"
           style={{
-            background: 'rgba(7, 8, 13, 0.97)',
+            background: 'rgba(255, 255, 255, 0.95)',
             backdropFilter: 'blur(24px) saturate(160%)',
-            borderBottom: '1px solid rgba(201, 169, 106, 0.08)',
+            borderBottom: '1px solid rgba(0, 0, 0, 0.06)',
           }}
         >
           {links.map((link) => (

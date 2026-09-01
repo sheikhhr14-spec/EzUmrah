@@ -53,7 +53,7 @@ export default function IntegrationsPage() {
             {integrations.map((integ, i) => (
               <div key={i} className="glass-card p-8 fade-up" style={{ animationDelay: `${i * 0.1}s` }}>
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold flex-shrink-0" style={{ background: 'linear-gradient(135deg, rgba(201,168,76,0.1), rgba(13,148,136,0.1))', border: '1px solid var(--border)', color: 'var(--gold)', fontFamily: 'var(--font-playfair), serif' }}>
+                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold flex-shrink-0" style={{ background: 'linear-gradient(135deg, rgba(184,146,63,0.1), rgba(13,148,136,0.1))', border: '1px solid var(--border)', color: 'var(--gold)', fontFamily: 'var(--font-playfair), serif' }}>
                     {integ.letter}
                   </div>
                   <div>

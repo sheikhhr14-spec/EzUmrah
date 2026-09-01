@@ -4,7 +4,7 @@ export default function Footer() {
     <footer className="relative pt-20 pb-10" style={{ background: 'var(--midnight)' }}>
       {/* Top gradient line */}
       <div className="absolute top-0 left-0 right-0 h-px"
-        style={{ background: 'linear-gradient(90deg, transparent 0%, rgba(201, 169, 106, 0.2) 50%, transparent 100%)' }}
+        style={{ background: 'linear-gradient(90deg, transparent 0%, rgba(184, 146, 63, 0.2) 50%, transparent 100%)' }}
       />
 
       <div className="container">
@@ -14,15 +14,15 @@ export default function Footer() {
             <a href="/" className="flex items-center gap-2.5 mb-5">
               <div className="w-9 h-9 rounded-xl flex items-center justify-center text-lg"
                 style={{
-                  background: 'linear-gradient(135deg, rgba(201, 169, 106, 0.15) 0%, rgba(201, 169, 106, 0.05) 100%)',
-                  border: '1px solid rgba(201, 169, 106, 0.2)',
+                  background: 'linear-gradient(135deg, rgba(184, 146, 63, 0.15) 0%, rgba(184, 146, 63, 0.05) 100%)',
+                  border: '1px solid rgba(184, 146, 63, 0.2)',
                 }}
               >
                 🕋
               </div>
               <span className="text-lg font-bold" style={{
                 fontFamily: 'var(--font-playfair), serif',
-                background: 'linear-gradient(135deg, #f8f6f1 0%, #c9a96a 100%)',
+                background: 'linear-gradient(135deg, #0f172a 0%, #b8923f 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
               }}>
@@ -35,19 +35,19 @@ export default function Footer() {
             <a href="https://linkedin.com/company/eztechify" target="_blank" rel="noopener noreferrer"
               className="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-bold transition-all duration-300"
               style={{
-                background: 'rgba(201, 169, 106, 0.06)',
-                border: '1px solid rgba(201, 169, 106, 0.1)',
+                background: 'rgba(184, 146, 63, 0.06)',
+                border: '1px solid rgba(184, 146, 63, 0.1)',
                 color: 'var(--text-dim)',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(201, 169, 106, 0.3)';
+                e.currentTarget.style.borderColor = 'rgba(184, 146, 63, 0.3)';
                 e.currentTarget.style.color = 'var(--gold2)';
-                e.currentTarget.style.background = 'rgba(201, 169, 106, 0.1)';
+                e.currentTarget.style.background = 'rgba(184, 146, 63, 0.1)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(201, 169, 106, 0.1)';
+                e.currentTarget.style.borderColor = 'rgba(184, 146, 63, 0.1)';
                 e.currentTarget.style.color = 'var(--text-dim)';
-                e.currentTarget.style.background = 'rgba(201, 169, 106, 0.06)';
+                e.currentTarget.style.background = 'rgba(184, 146, 63, 0.06)';
               }}
               aria-label="LinkedIn"
             >
@@ -128,12 +128,12 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8"
-          style={{ borderTop: '1px solid rgba(201, 169, 106, 0.06)' }}
+          style={{ borderTop: '1px solid rgba(184, 146, 63, 0.06)' }}
         >
           <p className="text-xs" style={{ color: 'var(--text-faint)' }}>© 2026 EzUmrah — All rights reserved.</p>
           <p className="text-xs" style={{ color: 'var(--text-faint)' }}>
             A product of <span style={{
-              background: 'linear-gradient(135deg, #c9a96a, #d8bd7e)',
+              background: 'linear-gradient(135deg, #b8923f, #d4b27a)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               fontWeight: 600,

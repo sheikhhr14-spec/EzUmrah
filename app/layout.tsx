@@ -239,7 +239,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {jsonLd.map((data, i) => (
           <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
         ))}
-        <meta name="theme-color" content="#07080d" />
+        <meta name="theme-color" content="#f8fafb" />
         <meta name="geo.distribution" content="global" />
         <meta name="geo.placename" content="Worldwide" />
         <meta name="ICBM" content="global" />

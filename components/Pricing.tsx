@@ -69,10 +69,10 @@ export default function Pricing() {
             <div
               key={i}
               className={`glass-card p-8 relative fade-up ${plan.popular ? 'glow-gold' : ''}`}
-              style={{ animationDelay: `${i * 0.1}s`, borderColor: plan.popular ? 'rgba(201,168,76,0.3)' : 'var(--border)', borderWidth: plan.popular ? '2px' : '1px' }}
+              style={{ animationDelay: `${i * 0.1}s`, borderColor: plan.popular ? 'rgba(184,146,63,0.3)' : 'var(--border)', borderWidth: plan.popular ? '2px' : '1px' }}
             >
               {plan.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-semibold" style={{ background: 'var(--gold)', color: 'var(--midnight)' }}>
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-semibold" style={{ background: 'var(--gold)', color: '#ffffff' }}>
                   Most Popular
                 </div>
               )}

@@ -130,7 +130,7 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-3 sm:gap-4">
                   {['Amadeus', 'Sabre', 'Galileo', 'Travelport'].map((name) => (
                     <div key={name} className="glass-card p-6 sm:p-8 text-center">
-                      <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center mx-auto mb-3 text-xl sm:text-2xl font-bold" style={{ background: 'linear-gradient(135deg, rgba(201,168,76,0.1), rgba(13,148,136,0.1))', border: '1px solid var(--border)', color: 'var(--gold)', fontFamily: 'var(--font-playfair), serif' }}>
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center mx-auto mb-3 text-xl sm:text-2xl font-bold" style={{ background: 'linear-gradient(135deg, rgba(184,146,63,0.1), rgba(13,148,136,0.1))', border: '1px solid var(--border)', color: 'var(--gold)', fontFamily: 'var(--font-playfair), serif' }}>
                         {name.charAt(0)}
                       </div>
                       <p className="text-sm font-semibold" style={{ color: 'var(--cream)' }}>{name}</p>
@@ -192,9 +192,9 @@ export default function Home() {
                 { name: 'Enterprise', price: '499', desc: 'For large operators handling thousands of pilgrims.', features: ['Unlimited pilgrims', 'Unlimited staff', 'Everything in Agency Pro', 'Hajj quota management', 'Multi-agency sub-accounts', 'Dedicated account manager'], popular: false },
               ].map((plan, i) => (
                 <ScrollReveal key={i} animation="scale-in" delay={i * 120} className={plan.popular ? 'glow-gold' : ''}>
-                  <div className={`glass-card p-6 sm:p-8 h-full relative ${plan.popular ? 'pricing-card' : ''}`} style={{ borderColor: plan.popular ? 'rgba(201, 169, 106, 0.3)' : 'var(--border)', borderWidth: plan.popular ? '2px' : '1px' }}>
+                  <div className={`glass-card p-6 sm:p-8 h-full relative ${plan.popular ? 'pricing-card' : ''}`} style={{ borderColor: plan.popular ? 'rgba(184, 146, 63, 0.3)' : 'var(--border)', borderWidth: plan.popular ? '2px' : '1px' }}>
                     {plan.popular && (
-                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-semibold whitespace-nowrap" style={{ background: 'var(--gold)', color: 'var(--midnight)' }}>
+                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-semibold whitespace-nowrap" style={{ background: 'var(--gold)', color: '#ffffff' }}>
                         Most Popular
                       </div>
                     )}
@@ -245,7 +245,7 @@ export default function Home() {
                     <div className="text-lg mb-4" style={{ color: 'var(--gold)' }}>★★★★★</div>
                     <p className="text-sm mb-6 leading-relaxed" style={{ color: 'var(--text)' }}>&ldquo;{item.text}&rdquo;</p>
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold flex-shrink-0" style={{ background: 'linear-gradient(135deg, var(--gold), var(--gold2))', color: 'var(--midnight)' }}>
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold flex-shrink-0" style={{ background: 'linear-gradient(135deg, var(--gold), var(--gold2))', color: '#ffffff' }}>
                         {item.initials}
                       </div>
                       <div>

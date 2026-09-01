@@ -18,7 +18,7 @@ export default function Integrations() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {integrations.map((integ, i) => (
             <div key={i} className="glass-card p-8 text-center fade-up" style={{ animationDelay: `${i * 0.1}s` }}>
-              <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-bold" style={{ background: 'linear-gradient(135deg, rgba(201,168,76,0.1), rgba(13,148,136,0.1))', border: '1px solid var(--border)', color: 'var(--gold)', fontFamily: 'var(--font-playfair), serif' }}>
+              <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl font-bold" style={{ background: 'linear-gradient(135deg, rgba(184,146,63,0.1), rgba(13,148,136,0.1))', border: '1px solid var(--border)', color: 'var(--gold)', fontFamily: 'var(--font-playfair), serif' }}>
                 {integ.name.charAt(0)}
               </div>
               <h3 className="text-lg font-semibold mb-2" style={{ color: 'var(--cream)' }}>{integ.name}</h3>

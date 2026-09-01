@@ -75,7 +75,7 @@ const releases = [
 
 const typeConfig: Record<string, { label: string; color: string; bg: string }> = {
   new: { label: 'New', color: '#14b8a6', bg: 'rgba(13,148,136,0.1)' },
-  improve: { label: 'Improved', color: '#c9a84c', bg: 'rgba(201,168,76,0.1)' },
+  improve: { label: 'Improved', color: '#c9a84c', bg: 'rgba(184,146,63,0.1)' },
   fix: { label: 'Fixed', color: '#60a5fa', bg: 'rgba(96,165,250,0.1)' },
 };
 
@@ -93,7 +93,7 @@ export default function Changelog() {
             <div key={i} className="glass-card p-8 fade-up" style={{ animationDelay: `${i * 0.05}s` }}>
               <div className="flex flex-wrap items-center gap-3 mb-4">
                 <h2 className="text-xl font-bold" style={{ color: 'var(--cream)', fontFamily: 'var(--font-playfair), serif' }}>{release.version}</h2>
-                <span className="text-xs px-3 py-1 rounded-full" style={{ background: 'rgba(201,168,76,0.1)', color: 'var(--gold)', border: '1px solid var(--border)' }}>{release.type}</span>
+                <span className="text-xs px-3 py-1 rounded-full" style={{ background: 'rgba(184,146,63,0.1)', color: 'var(--gold)', border: '1px solid var(--border)' }}>{release.type}</span>
                 <span className="text-sm" style={{ color: 'var(--text-faint)' }}>{release.date}</span>
               </div>
 

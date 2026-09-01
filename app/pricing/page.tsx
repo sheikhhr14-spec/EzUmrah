@@ -98,9 +98,9 @@ export default function PricingPage() {
           {/* Pricing cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-20">
             {plans.map((plan, i) => (
-              <div key={i} className={`glass-card p-8 relative ${plan.popular ? 'glow-gold' : ''}`} style={{ borderColor: plan.popular ? 'rgba(201,168,76,0.3)' : 'var(--border)', borderWidth: plan.popular ? '2px' : '1px' }}>
+              <div key={i} className={`glass-card p-8 relative ${plan.popular ? 'glow-gold' : ''}`} style={{ borderColor: plan.popular ? 'rgba(184,146,63,0.3)' : 'var(--border)', borderWidth: plan.popular ? '2px' : '1px' }}>
                 {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-semibold" style={{ background: 'var(--gold)', color: 'var(--midnight)' }}>
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-semibold" style={{ background: 'var(--gold)', color: '#ffffff' }}>
                     Most Popular
                   </div>
                 )}
@@ -140,7 +140,7 @@ export default function PricingPage() {
                 </thead>
                 <tbody>
                   {comparison.map((row, i) => (
-                    <tr key={i} style={{ borderBottom: i < comparison.length - 1 ? '1px solid rgba(201,168,76,0.06)' : 'none' }}>
+                    <tr key={i} style={{ borderBottom: i < comparison.length - 1 ? '1px solid rgba(184,146,63,0.06)' : 'none' }}>
                       <td className="p-4 text-sm" style={{ color: 'var(--text-dim)' }}>{row.feature}</td>
                       <td className="p-4 text-sm text-center" style={{ color: row.starter === '—' ? 'var(--text-faint)' : row.starter === '✓' ? 'var(--teal-light)' : 'var(--text-dim)' }}>{row.starter}</td>
                       <td className="p-4 text-sm text-center" style={{ color: row.pro === '—' ? 'var(--text-faint)' : row.pro === '✓' ? 'var(--teal-light)' : 'var(--text-dim)' }}>{row.pro}</td>

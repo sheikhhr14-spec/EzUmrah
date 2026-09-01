@@ -70,7 +70,7 @@ export default function Modules() {
           {modules.map((mod, i) => (
             <div key={i} className="glass-card p-8 fade-up" style={{ animationDelay: `${i * 0.05}s` }}>
               <div className="flex items-start gap-4 mb-4">
-                <div className="w-14 h-14 rounded-xl flex items-center justify-center text-3xl flex-shrink-0" style={{ background: 'rgba(201,168,76,0.08)', border: '1px solid var(--border)' }}>
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center text-3xl flex-shrink-0" style={{ background: 'rgba(184,146,63,0.08)', border: '1px solid var(--border)' }}>
                   {mod.icon}
                 </div>
                 <div>

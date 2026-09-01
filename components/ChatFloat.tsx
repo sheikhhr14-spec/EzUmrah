@@ -29,8 +29,8 @@ export default function ChatFloat() {
       {/* Button */}
       <div className="relative w-14 h-14 rounded-2xl flex items-center justify-center text-2xl transition-all duration-500 group-hover:scale-110"
         style={{
-          background: 'linear-gradient(135deg, rgba(201, 169, 106, 0.95) 0%, rgba(216, 189, 126, 0.95) 100%)',
-          boxShadow: '0 8px 32px rgba(201, 169, 106, 0.3), 0 4px 16px rgba(0, 0, 0, 0.3)',
+          background: 'linear-gradient(135deg, rgba(184, 146, 63, 0.95) 0%, rgba(216, 189, 126, 0.95) 100%)',
+          boxShadow: '0 8px 32px rgba(184, 146, 63, 0.3), 0 4px 16px rgba(0, 0, 0, 0.3)',
           border: '1px solid rgba(255, 255, 255, 0.1)',
         }}
       >

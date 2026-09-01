@@ -36,7 +36,7 @@ export default function Testimonials() {
               <div className="text-lg mb-4" style={{ color: 'var(--gold)' }}>★★★★★</div>
               <p className="text-sm mb-6 leading-relaxed" style={{ color: 'var(--text)' }}>&ldquo;{item.text}&rdquo;</p>
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0" style={{ background: 'linear-gradient(135deg, var(--gold), var(--gold-light))', color: 'var(--midnight)' }}>
+                <div className="w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0" style={{ background: 'linear-gradient(135deg, var(--gold), var(--gold-light))', color: '#ffffff' }}>
                   {item.initials}
                 </div>
                 <div>
