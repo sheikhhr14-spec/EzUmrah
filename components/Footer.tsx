@@ -1,4 +1,68 @@
 'use client';
+
+// ===== Payment Method SVG Icons =====
+const VisaIcon = () => (
+  <svg viewBox="0 0 48 16" width="40" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <text x="0" y="13" fontFamily="Arial, sans-serif" fontSize="14" fontWeight="900" fontStyle="italic" fill="#1A1F71" letterSpacing="0.5">VISA</text>
+  </svg>
+);
+
+const MastercardIcon = () => (
+  <svg viewBox="0 0 40 26" width="38" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="15" cy="13" r="11" fill="#EB001B" />
+    <circle cx="25" cy="13" r="11" fill="#F79E1B" opacity="0.9" />
+    <path d="M20 4.5a11 11 0 0 1 0 17 11 11 0 0 1 0-17z" fill="#FF5F00" />
+  </svg>
+);
+
+const AmexIcon = () => (
+  <svg viewBox="0 0 40 26" width="38" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="40" height="26" rx="3" fill="#1F72CD" />
+    <text x="5" y="11" fontFamily="Arial, sans-serif" fontSize="6.5" fontWeight="900" fill="#FFFFFF" letterSpacing="0.3">AMEX</text>
+    <text x="5" y="20" fontFamily="Arial, sans-serif" fontSize="5" fontWeight="700" fill="#FFFFFF" opacity="0.7" letterSpacing="0.5"> EXPRESS</text>
+  </svg>
+);
+
+const DiscoverIcon = () => (
+  <svg viewBox="0 0 48 16" width="44" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <text x="0" y="12" fontFamily="Arial, sans-serif" fontSize="9" fontWeight="900" fill="#231F20" letterSpacing="0.2">DISC</text>
+    <circle cx="34" cy="8" r="6" fill="#F68121" />
+    <text x="28" y="12" fontFamily="Arial, sans-serif" fontSize="7" fontWeight="900" fill="#FFFFFF">OVER</text>
+  </svg>
+);
+
+const BtcIcon = () => (
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="12" fill="#F7931A" />
+    <path d="M15.5 8.2c.2-1.3-.8-2-2.2-2l.4-1.6-1-.2-.4 1.6-.8-.2.4-1.6-1-.2-.4 1.6c-.2 0-.4 0-.6.1l-1.3-.3-.2 1s.8.1.8.1c.4 0 .5.4.5.5l-.2.6-.1.5-.6 2.4c0 .2-.2.4-.5.3l-.8-.2-.4 1.1 1.3.3c.2 0 .5.1.7.1l-.4 1.6 1 .2.4-1.6.8.2-.4 1.6 1 .2.4-1.6c1.7.2 3 .1 3.5-1.3.4-1.1-.2-1.7-1-1.9.5-.3.9-.8.7-1.9zm-1.5 3.8c-.3 1.1-2.2.5-2.8.4l.5-2c.6.1 2.6.4 2.3 1.6zm-.3-3c-.3 1-1.8.5-2.3.4l.5-1.8c.5.1 2.1.3 1.8 1.4z" fill="#FFFFFF" />
+  </svg>
+);
+
+const SolIcon = () => (
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5.5 8.2c.1-.1.2-.2.4-.2h11.3c.2 0 .3.1.4.2l1.4 1.4c.2.2.2.5 0 .7l-9.3 9.3c-.2.2-.5.2-.7 0l-1.4-1.4c-.1-.1-.1-.2-.1-.3s0-.2.1-.3l7.9-7.9c.1-.1.1-.2.1-.3s0-.2-.1-.3l-1.4-1.4c-.2-.2-.5-.2-.7 0l-7.9 7.9c-.1.1-.2.1-.3.1s-.2 0-.3-.1l-1.4-1.4c-.2-.2-.2-.5 0-.7L5.5 8.2z" fill="#9945FF" />
+    <path d="M8.2 4.5c.1-.1.2-.1.3-.1h11.3c.2 0 .3.1.4.2l1.4 1.4c.2.2.2.5 0 .7l-9.3 9.3c-.2.2-.5.2-.7 0l-1.4-1.4c-.2-.2-.2-.5 0-.7l7.9-7.9c.1-.1.1-.2.1-.3s0-.2-.1-.3l-1.4-1.4c-.2-.2-.5-.2-.7 0l-7.9 7.9c-.1.1-.2.1-.3.1s-.2 0-.3-.1l-1.4-1.4c-.2-.2-.2-.5 0-.7l2.7-2.7z" fill="#14F195" />
+  </svg>
+);
+
+const UsdtIcon = () => (
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="12" r="12" fill="#26A17B" />
+    <path d="M12 6.5c-2.9 0-5.2.6-5.2 1.3v2c0 .7 2.3 1.3 5.2 1.3s5.2-.6 5.2-1.3v-2c0-.7-2.3-1.3-5.2-1.3z" fill="#FFFFFF" />
+    <path d="M12 12.2c-1.4 0-2.7-.1-3.7-.4v1.8c.9.2 2.1.4 3.2.4v3c0 .2.2.4.5.4s.5-.2.5-.4v-3c1.1 0 2.3-.1 3.2-.4v-1.8c-1 .3-2.3.4-3.7.4z" fill="#FFFFFF" />
+  </svg>
+);
+
+const paymentMethods = [
+  { name: 'Visa', icon: <VisaIcon /> },
+  { name: 'Mastercard', icon: <MastercardIcon /> },
+  { name: 'American Express', icon: <AmexIcon /> },
+  { name: 'Discover', icon: <DiscoverIcon /> },
+  { name: 'Bitcoin', icon: <BtcIcon /> },
+  { name: 'Solana', icon: <SolIcon /> },
+  { name: 'USDT', icon: <UsdtIcon /> },
+];
+
 export default function Footer() {
   return (
     <footer className="relative pt-20 pb-10" style={{ background: 'var(--midnight)' }}>
@@ -126,8 +190,44 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* ===== Payment Methods ===== */}
+        <div className="mb-8 pt-8" style={{ borderTop: '1px solid rgba(184, 146, 63, 0.06)' }}>
+          <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: 'var(--cream)' }}>
+            We Accept
+          </p>
+          <div className="flex flex-wrap items-center gap-2.5">
+            {paymentMethods.map((method) => (
+              <div
+                key={method.name}
+                className="flex items-center justify-center px-3.5 py-2.5 rounded-xl transition-all duration-300"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.6)',
+                  border: '1px solid var(--border)',
+                  minHeight: '42px',
+                  minWidth: '58px',
+                }}
+                title={method.name}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = 'rgba(184, 146, 63, 0.3)';
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.9)';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                  e.currentTarget.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.06)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = 'var(--border)';
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.6)';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                {method.icon}
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Bottom bar */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8"
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-6"
           style={{ borderTop: '1px solid rgba(184, 146, 63, 0.06)' }}
         >
           <p className="text-xs" style={{ color: 'var(--text-faint)' }}>© 2026 EzUmrah — All rights reserved.</p>
