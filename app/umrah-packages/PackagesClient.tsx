@@ -415,7 +415,7 @@ export default function PackagesClient() {
         <div className="container text-center">
           <Reveal>
             <h2 className="mb-3" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', fontFamily: 'var(--font-playfair), serif', fontWeight: 700, color: C.text }}>Why Book With EzUmrah?</h2>
-            <p className="max-w-xl mx-auto mb-10" style={{ fontSize: '0.95rem', color: C.textDim }}>Trusted by 850+ travel agencies worldwide. We handle every detail so you can focus on your spiritual journey.</p>
+            <p className="max-w-xl mx-auto mb-10" style={{ fontSize: '0.95rem', color: C.textDim }}>We handle every detail so you can focus on your spiritual journey.</p>
           </Reveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
             {[{ icon: '🏨', title: 'Hotels Near Haram', desc: 'Walking distance to Masjid al-Haram and Masjid an-Nabawi' }, { icon: '🧭', title: 'Expert Guides', desc: 'Experienced group leaders for Umrah and Ziyarat' }, { icon: '🚐', title: 'All Transport', desc: 'Bus, flight, airport transfers, and inter-city travel' }, { icon: '💬', title: '24/7 Support', desc: 'WhatsApp support throughout your journey' }].map((item, i) => (
@@ -525,7 +525,7 @@ export default function PackagesClient() {
                 <div className="w-9 h-9 rounded-xl flex items-center justify-center text-lg" style={{ background: 'rgba(13,124,78,0.15)', border: '1px solid rgba(13,124,78,0.2)' }}>🕋</div>
                 <span className="text-lg font-bold" style={{ fontFamily: 'var(--font-playfair), serif', color: '#fff' }}>EzUmrah</span>
               </div>
-              <p className="text-sm" style={{ color: '#94a3b8' }}>Cloud travel CRM and Umrah packages for agencies worldwide. Trusted by 850+ agencies in 120+ countries.</p>
+              <p className="text-sm" style={{ color: '#94a3b8' }}>Cloud travel CRM and Umrah packages for agencies worldwide.</p>
             </div>
             <div>
               <h4 className="text-sm font-bold mb-3" style={{ color: '#fff', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Quick Links</h4>

@@ -40,7 +40,6 @@ const testimonials = [
 ];
 
 const stats = [
-  { value: '850+', label: 'Agencies Using EzUmrah' },
   { value: '42K+', label: 'Pilgrims Managed' },
   { value: '120+', label: 'Countries Served' },
   { value: '4.9★', label: 'Average User Rating' },

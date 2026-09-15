@@ -9,7 +9,7 @@ import ScrollReveal from '@/components/ScrollReveal';
 export const metadata: Metadata = {
   title: 'EzUmrah — Cloud Travel CRM for Umrah & Hajj Agencies Worldwide',
   description:
-    'EzUmrah is the all-in-one cloud CRM for travel agencies worldwide managing Umrah, Hajj, and holiday packages. Group bookings, flight management, hotel, visa, transport, invoicing, quotations, documents, and task management. Trusted by 850+ agencies in 120+ countries.',
+    'EzUmrah is the all-in-one cloud CRM for travel agencies worldwide managing Umrah, Hajj, and holiday packages. Group bookings, flight management, hotel, visa, transport, invoicing, quotations, documents, and task management.',
   alternates: { canonical: '/' },
 };
 

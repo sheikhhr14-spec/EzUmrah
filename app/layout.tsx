@@ -72,13 +72,13 @@ export const metadata: Metadata = {
     url: SITE_URL,
     title: 'EzUmrah — Cloud Travel CRM for Umrah & Hajj Agencies Worldwide',
     description:
-      'The all-in-one cloud CRM for travel agencies worldwide managing Umrah, Hajj, and holiday packages. Group bookings, flights, hotels, visas, invoicing, quotations, and document management. Trusted by 850+ agencies in 120+ countries.',
+      'The all-in-one cloud CRM for travel agencies worldwide managing Umrah, Hajj, and holiday packages. Group bookings, flights, hotels, visas, invoicing, quotations, and document management.',
     images: [{ url: '/og-image.svg', width: 1200, height: 630, alt: 'EzUmrah — Cloud Travel CRM for Umrah & Hajj Agencies Worldwide' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'EzUmrah — Cloud Travel CRM for Umrah & Hajj Agencies Worldwide',
-    description: 'The all-in-one cloud CRM for travel agencies worldwide managing Umrah, Hajj, and holiday packages. Trusted by 850+ agencies in 120+ countries.',
+    description: 'The all-in-one cloud CRM for travel agencies worldwide managing Umrah, Hajj, and holiday packages.',
     images: ['/og-image.svg'],
   },
   robots: {
@@ -124,7 +124,7 @@ const jsonLd = [
     applicationSubCategory: 'Travel CRM',
     operatingSystem: 'Web',
     url: SITE_URL,
-    description: 'EzUmrah is a cloud-based CRM software built for travel agencies worldwide managing Umrah, Hajj, and holiday packages. It includes 9 modules: group bookings, flight management, hotel reservations, visa tracking, transport, invoicing, quotations, document vault, and task management. Trusted by 850+ agencies in 120+ countries.',
+    description: 'EzUmrah is a cloud-based CRM software built for travel agencies worldwide managing Umrah, Hajj, and holiday packages. It includes 9 modules: group bookings, flight management, hotel reservations, visa tracking, transport, invoicing, quotations, document vault, and task management.',
     offers: [
       { '@type': 'Offer', name: 'Starter Plan', price: '79', priceCurrency: 'USD', description: 'Up to 200 pilgrims, 3 staff accounts, all CRM modules' },
       { '@type': 'Offer', name: 'Agency Pro Plan', price: '199', priceCurrency: 'USD', description: 'Up to 1,000 pilgrims, 15 staff, GDS integration, white-label portal' },
@@ -181,13 +181,13 @@ const jsonLd = [
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'What is EzUmrah?', acceptedAnswer: { '@type': 'Answer', text: 'EzUmrah is a cloud-based CRM software specifically built for travel agencies that manage Umrah, Hajj, and holiday packages. It includes 9 modules: group bookings, flight management, hotel reservations, visa tracking, transport, invoicing, quotations, document vault, and task management. It is used by 850+ agencies in 120+ countries.' } },
+      { '@type': 'Question', name: 'What is EzUmrah?', acceptedAnswer: { '@type': 'Answer', text: 'EzUmrah is a cloud-based CRM software specifically built for travel agencies that manage Umrah, Hajj, and holiday packages. It includes 9 modules: group bookings, flight management, hotel reservations, visa tracking, transport, invoicing, quotations, document vault, and task management. It is accessible worldwide.' } },
       { '@type': 'Question', name: 'Can EzUmrah integrate with GDS systems?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, EzUmrah offers integration with major Global Distribution Systems including Amadeus, Sabre, Galileo, and Travelport. This allows agencies to access real-time flight inventory and pricing directly from their CRM dashboard. GDS integration is available on Agency Pro and Enterprise plans.' } },
       { '@type': 'Question', name: 'Is EzUmrah suitable for Hajj management?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely. EzUmrah includes Hajj-specific features such as quota management, Mina tent allocation, Arafat logistics, and group tracking. It is used by agencies handling hundreds to thousands of pilgrims. The Enterprise plan includes the full Hajj quota management module.' } },
       { '@type': 'Question', name: 'Does EzUmrah offer white-label solutions?', acceptedAnswer: { '@type': 'Answer', text: "Yes, EzUmrah provides white-label booking portals and mobile apps that can be branded with your agency's logo, colors, and domain. This is available in the Agency Pro and Enterprise plans. Your customers see your brand throughout the booking experience." } },
       { '@type': 'Question', name: 'What is the pricing of EzUmrah?', acceptedAnswer: { '@type': 'Answer', text: 'EzUmrah offers three plans: Starter at $79/month, Agency Pro at $199/month (most popular), and Enterprise at $499/month. All plans include a 14-day free trial with no credit card required. Annual billing saves 20%. There are no per-booking commissions or setup fees.' } },
       { '@type': 'Question', name: 'Can I customize EzUmrah for my specific needs?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. EzTechify offers custom development services to tailor EzUmrah to your unique workflow, build custom travel websites, integrate additional APIs, or create branded mobile apps. Every custom project starts with a discovery call to understand your requirements.' } },
-      { '@type': 'Question', name: 'Which countries does EzUmrah support?', acceptedAnswer: { '@type': 'Answer', text: 'EzUmrah is a globally available cloud platform used by travel agencies in 120+ countries including the UK, USA, Saudi Arabia, India, Pakistan, Turkey, Malaysia, Indonesia, Egypt, and the UAE. It supports multi-currency invoicing and is accessible worldwide.' } },
+      { '@type': 'Question', name: 'Which countries does EzUmrah support?', acceptedAnswer: { '@type': 'Answer', text: 'EzUmrah is a globally available cloud platform used by travel agencies worldwide, including in the UK, USA, Saudi Arabia, India, Pakistan, Turkey, Malaysia, Indonesia, Egypt, and the UAE. It supports multi-currency invoicing and is accessible worldwide.' } },
       { '@type': 'Question', name: 'How long does it take to set up EzUmrah?', acceptedAnswer: { '@type': 'Answer', text: 'Most agencies are up and running in under a day. Sign up takes 2 minutes, account activation takes up to 4 hours for license verification, and the full setup process takes a few hours.' } },
       { '@type': 'Question', name: 'Is my data secure with EzUmrah?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. All data is encrypted with AES-256 at rest and TLS 1.3 in transit. We implement strict access controls, regular security audits, and automated backups. Document vault access is role-based, and we comply with GDPR and applicable local data protection laws.' } },
       { '@type': 'Question', name: 'Can I cancel my EzUmrah subscription anytime?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. There are no long-term contracts. You can cancel your subscription at any time, and it takes effect at the end of your current billing cycle. Upon cancellation, you have 30 days to export your data.' } },

@@ -10,7 +10,7 @@ export default function CTA() {
           Ready to Move Your Agency to the Cloud?
         </h2>
         <p className="text-lg mb-10 max-w-2xl mx-auto" style={{ color: 'var(--text-dim)' }}>
-          Join 850+ travel agencies using EzUmrah to manage pilgrims, bookings, invoices, and documents — all from one dashboard. Or let us build you a custom solution.
+          EzUmrah helps you manage pilgrims, bookings, invoices, and documents — all from one dashboard. Or let us build you a custom solution.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="#pricing" className="btn-gold text-base">Start Free 14-Day Trial</a>

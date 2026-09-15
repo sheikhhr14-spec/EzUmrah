@@ -13,7 +13,6 @@ export default function Hero() {
 
   const stats = [
     { value: '42K+', label: 'Pilgrims' },
-    { value: '850+', label: 'Agencies' },
     { value: '120+', label: 'Countries' },
     { value: '4.9★', label: 'Rating' },
   ];
