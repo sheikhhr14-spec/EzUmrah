@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fdfdfb"/>
+      <stop offset="1" stop-color="#eef2f7"/>
+    </linearGradient>
+    <linearGradient id="band" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d4b27a"/>
+      <stop offset="0.5" stop-color="#b8923f"/>
+      <stop offset="1" stop-color="#d4b27a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+  <rect width="128" height="128" rx="28" fill="none" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- Kaaba: top face -->
+  <polygon points="42,42 58,30 100,30 84,42" fill="#2a2a38"/>
+
+  <!-- Kaaba: right face -->
+  <polygon points="84,42 100,30 100,76 84,88" fill="#1e1e2c"/>
+
+  <!-- Kaaba: front face -->
+  <rect x="42" y="42" width="42" height="46" fill="#14141f"/>
+
+  <!-- Gold kiswa band on front face -->
+  <rect x="42" y="56" width="42" height="9" fill="url(#band)"/>
+
+  <!-- Gold band on right face (darker, in shadow) -->
+  <polygon points="84,56 100,44 100,53 84,65" fill="#8a6d2f"/>
+
+  <!-- Kaaba door (gold) on front face -->
+  <rect x="56" y="70" width="12" height="18" rx="6" fill="#b8923f"/>
+  <rect x="58" y="72" width="8" height="4" rx="2" fill="#d4b27a"/>
+</svg>

@@ -8,13 +8,25 @@ export default function manifest(): MetadataRoute.Manifest {
       'The all-in-one cloud CRM for travel agencies managing Umrah, Hajj, and holiday packages.',
     start_url: '/',
     display: 'standalone',
-    background_color: '#060b14',
-    theme_color: '#060b14',
+    background_color: '#f8fafb',
+    theme_color: '#f8fafb',
     icons: [
+      {
+        src: '/favicon.ico',
+        sizes: '48x48',
+        type: 'image/x-icon',
+      },
       {
         src: '/icon.svg',
         sizes: 'any',
         type: 'image/svg+xml',
+        purpose: 'any',
+      },
+      {
+        src: '/apple-icon.png',
+        sizes: '180x180',
+        type: 'image/png',
+        purpose: 'any',
       },
     ],
   };
